@@ -33,6 +33,10 @@ public class AdminController {
     }
 
     //PRODUCT PRODUCT PRODUCT
+    @GetMapping("/")
+    public String getProductList(){
+        return "redirect:/admin/getAllProductList";
+    }
 
     @GetMapping("/getAllProductList")
     public String getAllProductList(Model model){
