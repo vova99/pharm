@@ -1,0 +1,221 @@
+<th:block xmlns:th="http://www.w3.org/1999/xhtml" th:fragment="fragProducts">
+    <!-- Материалы  START-->
+    <div class="tab-pane fade show active container" id="admin-products">
+        <table class="table table-hover table-striped" id="admin-products-table">
+            <br>
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Название</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="b : ${objectList}" th:id="${b.id}">
+                <td th:text="${b.id}"></td>
+                <td scope="row" th:text="${b.name}"></td>
+                <td>
+                    <a th:if="${infoBtnOn!=null}" class="btn btn-primary btn-sm" th:href="@{${urlInfo}+'-'+${b.id}}"><i class="fas fa-info-circle" data-toggle="tooltip" title="Подробно"></i></a>
+                    <button type="button" class="btn btn-primary btn-sm" onclick="editProduct(this)"><i class="fas fa-pen" data-toggle="tooltip" title="Редактировать"></i></button>
+                    <button type="button" class="btn btn-primary btn-sm" onclick="deleteProduct(this)"><i class="far fa-trash-alt" data-toggle="tooltip" title="Удалить"></i></button>
+                </td>
+            </tr>
+            </tbody>
+
+            <tfoot>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Название</th>
+                <th></th>
+            </tr>
+            </tfoot>
+        </table>
+        <!-- BUTTON START-->
+        <div class="float-action-button">
+            <button type="button" class="buttons main-button btn btn-primary" title="Добавить" data-toggle="modal" data-placement="left" data-target="#addProductModal">
+                <i class="fa fa-plus"></i>
+            </button>
+        </div>
+        <!-- BUTTON END-->
+    </div>
+    <!-- Материалы END -->
+
+
+    <!-- EDIT BREED OF TREE MODAL START -->
+    <div class="modal fade" id="editProductModal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editProductModalHeader">Редактировать</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form th:action="${urlEdit}" method="post">
+                    <div class="modal-body">
+                        <input type="text" id="editProductId" hidden="" name="id">
+
+                        <label class="col-form-label" for="editProductName">Название</label>
+                        <input type="text" class="form-control" id="editProductName" required="required" autocomplete="off" name="nameOfObject">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button submit" class="btn btn-primary">Сохранить</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function editProduct(btnObj) {
+
+            var trObj = btnObj.parentElement.parentElement;
+            var trId =  $(trObj).attr('id');
+            $('#editProductId').val(trId);
+            console.log(  $(trObj).attr('id'));
+            var nameHeader = $(trObj).find('td:eq(1)').text();
+            $('#editProductModalHeader').text("Редактировать \""+nameHeader+"\"");
+
+            var name = $(trObj).find('td:eq(1)').text();
+
+            $('#editProductName').val(name);
+
+            $('#editProductModal').modal('show');
+        }
+    </script>
+    <!-- EDIT BREED OF TREE MODAL END -->
+
+    <!-- ADD BREED OF TREE MODAL START -->
+    <div class="modal fade" id="addProductModal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Добавить материал</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form th:action="${urlAdd}" method="post">
+                    <div class="modal-body">
+
+                        <label class="col-form-label" for="addProductName">Название</label>
+                        <input type="text" class="form-control" id="addProductName" required="required" autocomplete="off" name="nameOfObject">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button submit" class="btn btn-primary">Добавить</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteConfirmationModal">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Удаление</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form th:action="${urlDelete}" method="post">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="deleteProductModalId" hidden="hidden" autocomplete="off" name="id">
+                            <input type="text" class="form-control" id="deleteProductContractModalId" hidden="hidden" autocomplete="off" name="contractId">
+
+                            <p id="deleteModalConfirmation">
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Удалить</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function deleteProduct(btnObj) {
+            let trObj = btnObj.parentElement.parentElement;
+            let trId =  $(trObj).attr('id');
+            $('#deleteProductModalId').val(trId);
+            console.log(  $(trObj).attr('id'));
+            let nameOfObject =  $(trObj).find('td:eq(1)').text();
+
+            $('#deleteModalConfirmation').text("Вы уверены, что хотите удалить "+nameOfObject+" ?");
+            $('#deleteConfirmationModal').modal('show');
+        }
+    </script>
+    <!-- CONFIRMATION MODAL END -->
+</th:block>
+
+
+<th:block xmlns:th="http://www.w3.org/1999/xhtml" th:fragment="fragInfoProducts">
+    <!-- Материалы  START-->
+    <div class="tab-pane fade show active container">
+           <form th:action="@{/admin/editInfoProduct}" method="post">
+               <input type="hidden" name="id" th:value="${product.id}">
+
+               <div class="form-group row d-flex" style="align-items: flex-end">
+                   <div class="col-6">
+                       <label class="col-form-label" for="editNameOfProduct">Назва</label>
+                       <input type="text" class="form-control" id="editNameOfProduct" required="required" autocomplete="off" placeholder="Не заповнено" name="name" th:value="${product?.name}">
+                   </div>
+
+                   <div class="col-6">
+                       <label class="control-label" for="editUrlName" style="padding-top: 7px">Url адреса</label>
+                       <input type="text" class="form-control" id="editUrlName" required="required" autocomplete="off" placeholder="Не заповнено" name="url" th:value="${product?.url}">
+                   </div>
+               </div>
+               <div class="form-group row d-flex" style="align-items: flex-end">
+                   <div class="col-6">
+                       <label class="col-form-label" for="editPharmGroup">Фармацевтична форма</label>
+                       <select class="form-control" id="editPharmGroup" name="pharmaceuticalForm.id">
+                           <option th:each="pharm:${pharmList}" th:value="${pharm.id}" th:text="${pharm.name}" th:selected="${product?.pharmaceuticalForm?.id==pharm.id}"></option>
+                       </select>
+                   </div>
+
+                   <div class="col-6">
+                       <label class="control-label" for="editDrugClass" style="padding-top: 7px">Фармакологічна група</label>
+                       <select class="form-control" id="editDrugClass" name="drugClass.id">
+                           <option th:each="drug:${drugList}" th:value="${drug.id}" th:text="${drug.name}" th:selected="${product?.drugClass?.id==drug.id}"></option>
+                       </select>
+                  </div>
+               </div>
+
+               <div class="form-group row d-flex" style="align-items: flex-end">
+                   <div class="col-12">
+                       <label class="col-form-label" for="editTargetSpecies">Види тварин</label>
+                       <select multiple class="form-control" id="editTargetSpecies" name="targetList">
+                           <option th:each="target:${targetList}" th:value="${target.id}" th:text="${target.name}" th:selected="${product?.targetList?.contains(target)}"></option>
+                       </select>
+                   </div>
+                   <div class="col-12">
+                       <label class="col-form-label" for="mytextarea">Опис продукту</label><br>
+                       <textarea id="mytextarea" rows="20" style="width: 100%" name="bodyOfProduct" th:text="${product?.bodyOfProduct}"></textarea>
+                   </div>
+               </div>
+               <div class="col-12">
+                   <button id="buttonSubmit" type="submit" class="btn btn-primary" style="float: right">Зберегти</button>
+               </div>
+           </form>
+       </div>
+        <!-- BUTTON START-->
+        <div class="float-action-button">
+            <button type="button" class="buttons main-button btn btn-primary" title="Добавить" data-toggle="modal" data-placement="left" data-target="#addProductModal">
+                <i class="fa fa-plus"></i>
+            </button>
+        </div>
+        <!-- BUTTON END-->
+    </div>
+    <!-- Материалы END -->
+
+
+
+</th:block>

@@ -13,5 +13,5 @@ public class PharmaceuticalForm {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String form;
+    private String name;
 }

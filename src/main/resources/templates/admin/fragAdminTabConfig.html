@@ -1,0 +1,26 @@
+<th:block xmlns:th="http://www.w3.org/1999/xhtml" th:fragment="adminDashboard">
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/getAllProductList"
+                   th:classappend="${tabName.equals('products')} ? 'active':''">Продукти</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/getAllPharmaceuticalFormList"
+                   th:classappend="${tabName.equals('pharm')} ? 'active':''">Фармацевтична форма</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/getAllDrugClassList"
+                   th:classappend="${tabName.equals('drugClass')} ? 'active':''">Фармакологічна група</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/getAllTargetSpeciesList"
+                   th:classappend="${tabName.equals('targetSpecies')} ? 'active':''">Види тварин</a>
+            </li>
+        </ul>
+    </div>
+</th:block>
+
+
+
+

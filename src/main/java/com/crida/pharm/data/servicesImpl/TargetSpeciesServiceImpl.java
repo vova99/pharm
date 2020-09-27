@@ -4,9 +4,11 @@ import com.crida.pharm.data.entity.TargetSpecies;
 import com.crida.pharm.data.jpa.TargetSpeciesJPA;
 import com.crida.pharm.data.services.TargetSpeciesService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class TargetSpeciesServiceImpl implements TargetSpeciesService {
     private TargetSpeciesJPA targetSpeciesJPA;
 

@@ -2,10 +2,8 @@ package com.crida.pharm.data.entity;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
@@ -13,5 +11,7 @@ public class TargetSpecies {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String nameOfTarget;
+    private String name;
+    @ManyToMany
+    private List<Product>  products;
 }

@@ -12,26 +12,16 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private String activeSubstance;
+    private String name;
+    @Lob
+    private String bodyOfProduct;
+    @Column(unique = true)
+    private String url;
 
-    private String composition;
-    private String pharmForm;
-    private String pharmProperty;
+
 
     @ManyToMany
     private List<TargetSpecies> targetList;
-
-    private String indications;
-    private String contraindications;
-
-    private String adverseReactions;
-    private String warning;
-
-    private String dosage;
-    private String waitingTime;
-    private String storage;
-
-
     @ManyToOne
     private PharmaceuticalForm pharmaceuticalForm;
     @ManyToOne

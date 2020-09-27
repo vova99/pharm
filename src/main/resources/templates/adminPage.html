@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWIDA</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{../css/style.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{../css/datatables.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{../css/dataTables.bootstrap4.css}">
+    <link th:href="@{../css/all.css}" rel="stylesheet">
+    <link th:href="@{../css/fontawesome.css}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{../css/component-chosen.css}">
+</head>
+<body>
+
+
+<!-- TABS -->
+<div class="container-fluid">
+    <!-- HEADERS START-->
+    <div th:if="${fragmentPathTabConfig!=null}">
+        <div th:replace="~{admin/fragAdminTabConfig :: ${fragmentPathTabConfig}}"></div>
+    </div>
+    <!-- HEADERS END-->
+
+
+
+    <!-- ALL TABLES START-->
+    <div id="myTabContent" class="tab-content" >
+
+        <div th:if="${fragmentPathProducts!=null}">
+            <div th:replace="~{admin/fragOfProducts :: ${fragmentPathProducts}}"></div>
+        </div>
+    </div>
+    <!-- ALL TABLES end-->
+</div>
+<!-- TABS end-->
+
+
+<!-- SCRIPTS START-->
+<script type="text/javascript" th:src="@{../js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{../js/popper.min.js}"></script>
+<script type="text/javascript" th:src="@{../js/bootstrap.min.js}"></script>
+
+<script type="text/javascript" th:src="@{../js/datatables.js}"></script>
+<script type="text/javascript" th:src="@{../js/dataTables.bootstrap4.js}"></script>
+
+<!--<script type="text/javascript" th:src="@{../js/bootstrap-multiselect.js}"></script>-->
+<script type="text/javascript" th:src="@{../js/extent.calculation.js}"></script>
+<script type="text/javascript" th:src="@{../js/deadlines.checkout.js}"></script>
+<script type="text/javascript" th:src="@{../js/set.hidden.value.js}"></script>
+<script type="text/javascript" th:src="@{../js/admin/admin.tabs.config.js}"></script>
+<script type="text/javascript" th:src="@{../js/admin/choosen.js}"></script>
+<script type="text/javascript">
+    $('.form-control-chosen').chosen();
+</script>
+<!-- SCRIPTS  END-->
+</body>
+</html>

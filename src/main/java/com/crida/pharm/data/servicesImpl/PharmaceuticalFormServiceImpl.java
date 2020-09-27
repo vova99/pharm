@@ -4,9 +4,11 @@ import com.crida.pharm.data.entity.PharmaceuticalForm;
 import com.crida.pharm.data.jpa.PharmaceuticalFormJPA;
 import com.crida.pharm.data.services.PharmaceuticalFormService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class PharmaceuticalFormServiceImpl implements PharmaceuticalFormService {
     private PharmaceuticalFormJPA formJPA;
 
