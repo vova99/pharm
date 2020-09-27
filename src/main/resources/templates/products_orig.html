@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crida Pharm™</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=latin-ext"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/old.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+
+<body>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="navbar-brand logo">
+                <img src="img/logo.png" alt="" class="logo-standard">
+                <img src="img/logo-sm.png" alt="" class="logo-sm">
+            </div>
+
+            <input type="search" class="mobileSearch form-control" placeholder="Пошук...">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03"
+                aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample03">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">ПРО НАС</a>
+                    </li>
+                    <li class="sep">.</li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/products">ПРОДУКТИ</a>
+                    </li>
+                    <li class="sep">.</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contacts">КОНТАКТИ</a>
+                    </li>
+                    <li class="nav-item">
+                        <input class="form-control desctopSearch" type="search" placeholder="Пошук..." id="search" name="search"
+                               autocomplete="off">
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://www.cridapharm.ro/en/catalog" id="lang-selector">EN</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <ul class="list-group" id="list" style="width: 50%; margin: 0 auto; position: absolute; z-index: 9999; right: 0;"></ul>
+    </header>
+
+    <div id="body-content">
+
+        <h1>ПРОДУКТИ</h1>
+
+        <div id="products-banner"></div>
+
+        <nav id="criteria-index">
+
+            <ul id="tab-links">
+                <li class=""><a href="#c1">ФАРМАЦЕВТИЧНА ФОРМА</a></li>
+                <li class="active"><a href="#c2">ФАРМАКОЛОГІЧНА ГРУПА</a></li>
+                <li class=""><a href="#c3">ВИД ТВАРИН</a></li>
+            </ul>
+
+        </nav>
+
+        <section id="criteria-description">
+
+            <article id="c1" style="display: none;">
+
+                <h3 onclick="sh('injectabil')">Injectable products</h3>
+
+                <div id="injectabil" class="collapsable" style="display: none;">
+                    <ul>
+                        <li><a href="/en/catalog/amoxicridretard15inj">AMOXICRID RETARD 15% inj</a></li>
+                        <li><a href="/en/catalog/ceftisol">CEFTISOL</a></li>
+                        <li><a href="/en/catalog/clamoxrtuinj">CLAMOX RTU inj</a></li>
+                        <li><a href="/en/catalog/crimectininj">CRIMECTIN inj</a></li>
+                        <li><a href="/en/catalog/crimectinplusinj">CRIMECTIN PLUS inj</a></li>
+                        <li><a href="/en/catalog/enroflox5inj">ENROFLOX 5% inj</a></li>
+                        <li><a href="/en/catalog/enroflox10inj">ENROFLOX 10%</a></li>
+                        <li><a href="/en/catalog/enrofloxmaxinj">ENROFLOX MAX inj</a></li>
+                        <li><a href="/en/catalog/enrofloxplusinj">ENROFLOX PLUS inj</a></li>
+                        <li><a href="/en/catalog/eprimecinj">EPRIMEC inj</a></li>
+                        <li><a href="/en/catalog/florcrid30inj">FLORCRID 30% inj</a></li>
+                        <li><a href="/en/catalog/lincomix10inj">LINCOMIX 10% inj</a></li>
+                        <li><a href="/en/catalog/lincomix300inj">LINCOMIX 300 inj</a></li>
+                        <li><a href="/en/catalog/marboxil100inj">MARBOXIL 100 inj</a></li>
+                        <li><a href="/en/catalog/penicilin30">PENICILIN 30</a></li>
+                        <li><a href="/en/catalog/spectolinj">SPECTOL inj</a></li>
+                        <li><a href="/en/catalog/streptopen">STREPTOPEN</a></li>
+                        <li><a href="/en/catalog/teraciclinla30inj">TERACICLIN LA 30% inj</a></li>
+                        <li><a href="/en/catalog/trimadoxinj">TRIMADOX inj</a></li>
+                        <li><a href="/en/catalog/tyloplusinj">TYLOPLUS inj</a></li>
+                    </ul>
+
+                </div>
+
+
+                <h3 onclick="sh('intramamar')">Products with intramammar administration</h3>
+
+                <div id="intramamar" class="collapsable" style="display: none;">
+
+                    <ul>
+
+
+                        <li><a href="/en/catalog/cefmastdc">CEFMAST DC</a></li>
+
+
+                        <li><a href="/en/catalog/clamoxlc">CLAMOX LC</a></li>
+
+
+                        <li><a href="/en/catalog/keraseal">KERASEAL</a></li>
+
+
+                        <li><a href="/en/catalog/microcloxedc">MICROCLOX EDC </a></li>
+
+
+                    </ul>
+
+                </div>
+
+
+                <h3 onclick="sh('oral')">Products with oral administration</h3>
+
+                <div id="oral" class="collapsable" style="display: none;">
+
+                    <ul>
+
+
+                        <li><a href="/en/catalog/cribendazol10">CRIBENDAZOL 10%</a></li>
+
+
+                        <li><a href="/en/catalog/cribendazol25">CRIBENDAZOL 2.5%</a></li>
+
+
+                    </ul>
+
+                </div>
+
+
+                <h3 onclick="sh('pulberi-in-apa-de-baut')">Products in powder form administered in drinking water</h3>
+
+                <div id="pulberi-in-apa-de-baut" class="collapsable" style="display: none;">
+
+                    <ul>
+
+
+                        <li><a href="/en/catalog/aminovit">AMINOVIT</a></li>
+
+
+                        <li><a href="/en/catalog/amoxicrid60">AMOXICRID 60%</a></li>
+
+
+                        <li><a href="/en/catalog/apracyn">APRACYN</a></li>
+
+
+                        <li><a href="/en/catalog/colicrid50">COLICRID 50%</a></li>
+
+
+                        <li><a href="/en/catalog/doxicol60">DOXICOL 60%</a></li>
+
+
+                        <li><a href="/en/catalog/lincomix60">LINCOMIX 60%</a></li>
+
+
+                        <li><a href="/en/catalog/neocen40">NEOCEN 40%</a></li>
+
+
+                        <li><a href="/en/catalog/oxicridpulv40">OXICRID PULV. 40%</a></li>
+
+
+                        <li><a href="/en/catalog/sintil60">SINTIL 60%</a></li>
+
+
+                        <li><a href="/en/catalog/termixtim800">TERMIXTIM 800</a></li>
+
+
+                        <li><a href="/en/catalog/tiagen800wsp">TIAGEN 800 WSP</a></li>
+
+
+                        <li><a href="/en/catalog/tyloplus20">TYLOPLUS 20%</a></li>
+
+
+                        <li><a href="/en/catalog/vitaminac">VITAMINA C</a></li>
+
+
+                    </ul>
+
+                </div>
+
+
+                <h3 onclick="sh('solutii-in-apa-de-baut')">Products in the form of solutions with administration in
+                    drinking water</h3>
+
+                <div id="solutii-in-apa-de-baut" class="collapsable" style="display: none;">
+
+                    <ul>
+
+
+                        <li><a href="/en/catalog/colicrid10">COLICRID 10%</a></li>
+
+
+                        <li><a href="/en/catalog/enroflox10">ENROFLOX 10%</a></li>
+
+
+                        <li><a href="/en/catalog/florcrid10">FLORCRID 10%</a></li>
+
+
+                        <li><a href="/en/catalog/florcrid25">FLORCRID 2.5%</a></li>
+
+
+                        <li><a href="/en/catalog/levavermin">LEVAVERMIN</a></li>
+
+
+                        <li><a href="/en/catalog/paracetamplus">PARACETAM PLUS</a></li>
+
+
+                        <li><a href="/en/catalog/sulfatrim">SULFATRIM</a></li>
+
+
+                        <li><a href="/en/catalog/tiagen10">TIAGEN 10%</a></li>
+
+
+                        <li><a href="/en/catalog/tyloplus25">TYLOPLUS 25%</a></li>
+
+
+                        <li><a href="/en/catalog/uravitaamino">URAVITA-AMINO</a></li>
+
+
+                    </ul>
+
+                </div>
+
+
+                <h3 onclick="sh('pulberi-in-furaj')">Products in powder form with administration in fodder</h3>
+
+                <div id="pulberi-in-furaj" class="collapsable" style="">
+
+                    <ul>
+
+
+                        <li><a href="/en/catalog/clorcrid40premix">CLORCRID 40% PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/colistoppremix">COLISTOP PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/enroflox40premix">ENROFLOX 40% PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/florcrid4premix">FLORCRID 4% PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/flubendazol10premix">FLUBENDAZOL 10% PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/imunosuinpluspremix">IMUNOSUIN PLUS PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/salmoxolpremix">SALMOXOL PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/tiagen80premix">TIAGEN 80% PREMIX</a></li>
+
+
+                    </ul>
+
+                </div>
+
+
+            </article>
+
+
+            <article id="c2" style="display: block;">
+
+
+                <h3 onclick="sh('antibioticesulfamide')">Antibiotics and sulfamide</h3>
+
+                <div id="antibioticesulfamide" class="collapsable" style="display: none;">
+
+                    <ul>
+
+
+                        <li><a href="/en/catalog/amoxicrid60">AMOXICRID 60%</a></li>
+
+
+                        <li><a href="/en/catalog/amoxicridretard15inj">AMOXICRID RETARD 15% inj</a></li>
+
+
+                        <li><a href="/en/catalog/apracyn">APRACYN</a></li>
+
+
+                        <li><a href="/en/catalog/cefmastdc">CEFMAST DC</a></li>
+
+
+                        <li><a href="/en/catalog/ceftisol">CEFTISOL</a></li>
+
+
+                        <li><a href="/en/catalog/clamoxlc">CLAMOX LC</a></li>
+
+
+                        <li><a href="/en/catalog/clamoxrtuinj">CLAMOX RTU inj</a></li>
+
+
+                        <li><a href="/en/catalog/clorcrid40premix">CLORCRID 40% PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/colicrid10">COLICRID 10%</a></li>
+
+
+                        <li><a href="/en/catalog/colicrid50">COLICRID 50%</a></li>
+
+
+                        <li><a href="/en/catalog/doxicol60">DOXICOL 60%</a></li>
+
+
+                        <li><a href="/en/catalog/florcrid4premix">FLORCRID 4% PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/florcrid10">FLORCRID 10%</a></li>
+
+
+                        <li><a href="/en/catalog/florcrid25">FLORCRID 2.5%</a></li>
+
+
+                        <li><a href="/en/catalog/florcrid30inj">FLORCRID 30% inj</a></li>
+
+
+                        <li><a href="/en/catalog/lincomix10inj">LINCOMIX 10% inj</a></li>
+
+
+                        <li><a href="/en/catalog/lincomix60">LINCOMIX 60%</a></li>
+
+
+                        <li><a href="/en/catalog/lincomix300inj">LINCOMIX 300 inj</a></li>
+
+
+                        <li><a href="/en/catalog/microcloxedc">MICROCLOX EDC </a></li>
+
+
+                        <li><a href="/en/catalog/neocen40">NEOCEN 40%</a></li>
+
+
+                        <li><a href="/en/catalog/oxicridpulv40">OXICRID PULV. 40%</a></li>
+
+
+                        <li><a href="/en/catalog/penicilin30">PENICILIN 30</a></li>
+
+
+                        <li><a href="/en/catalog/sintil60">SINTIL 60%</a></li>
+
+
+                        <li><a href="/en/catalog/spectolinj">SPECTOL inj</a></li>
+
+
+                        <li><a href="/en/catalog/streptopen">STREPTOPEN</a></li>
+
+
+                        <li><a href="/en/catalog/teraciclinla30inj">TERACICLIN LA 30% inj</a></li>
+
+
+                        <li><a href="/en/catalog/tiagen10">TIAGEN 10%</a></li>
+
+
+                        <li><a href="/en/catalog/tiagen80premix">TIAGEN 80% PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/tiagen800wsp">TIAGEN 800 WSP</a></li>
+
+
+                        <li><a href="/en/catalog/tyloplus20">TYLOPLUS 20%</a></li>
+
+
+                        <li><a href="/en/catalog/tyloplus25">TYLOPLUS 25%</a></li>
+
+
+                        <li><a href="/en/catalog/tyloplusinj">TYLOPLUS inj</a></li>
+
+
+                    </ul>
+
+                </div>
+
+
+                <h3 onclick="sh('chimioterapice')">Chemotherapeuticals</h3>
+
+                <div id="chimioterapice" class="collapsable" style="display: none;">
+
+                    <ul>
+
+
+                        <li><a href="/en/catalog/enroflox5inj">ENROFLOX 5% inj</a></li>
+
+
+                        <li><a href="/en/catalog/enroflox10">ENROFLOX 10%</a></li>
+
+
+                        <li><a href="/en/catalog/enroflox10inj">ENROFLOX 10%</a></li>
+
+
+                        <li><a href="/en/catalog/enroflox40premix">ENROFLOX 40% PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/enrofloxmaxinj">ENROFLOX MAX inj</a></li>
+
+
+                        <li><a href="/en/catalog/enrofloxplusinj">ENROFLOX PLUS inj</a></li>
+
+
+                        <li><a href="/en/catalog/marboxil100inj">MARBOXIL 100 inj</a></li>
+
+
+                        <li><a href="/en/catalog/sulfatrim">SULFATRIM</a></li>
+
+
+                        <li><a href="/en/catalog/trimadoxinj">TRIMADOX inj</a></li>
+
+
+                    </ul>
+
+                </div>
+
+
+                <h3 onclick="sh('antiparazitare')">Antiparasitical</h3>
+
+                <div id="antiparazitare" class="collapsable" style="display: none;">
+
+                    <ul>
+
+
+                        <li><a href="/en/catalog/cribendazol10">CRIBENDAZOL 10%</a></li>
+
+
+                        <li><a href="/en/catalog/cribendazol25">CRIBENDAZOL 2.5%</a></li>
+
+
+                        <li><a href="/en/catalog/crimectininj">CRIMECTIN inj</a></li>
+
+
+                        <li><a href="/en/catalog/crimectinplusinj">CRIMECTIN PLUS inj</a></li>
+
+
+                        <li><a href="/en/catalog/eprimecinj">EPRIMEC inj</a></li>
+
+
+                        <li><a href="/en/catalog/flubendazol10premix">FLUBENDAZOL 10% PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/levavermin">LEVAVERMIN</a></li>
+
+
+                    </ul>
+
+                </div>
+
+
+                <h3 onclick="sh('vitamineminerale')">Vitamins and minerals</h3>
+
+                <div id="vitamineminerale" class="collapsable" style="display: none;">
+
+                    <ul>
+
+
+                        <li><a href="/en/catalog/aminovit">AMINOVIT</a></li>
+
+
+                        <li><a href="/en/catalog/colistoppremix">COLISTOP PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/imunosuinpluspremix">IMUNOSUIN PLUS PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/keraseal">KERASEAL</a></li>
+
+
+                        <li><a href="/en/catalog/paracetamplus">PARACETAM PLUS</a></li>
+
+
+                        <li><a href="/en/catalog/salmoxolpremix">SALMOXOL PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/termixtim800">TERMIXTIM 800</a></li>
+
+
+                        <li><a href="/en/catalog/uravitaamino">URAVITA-AMINO</a></li>
+
+
+                        <li><a href="/en/catalog/vitaminac">VITAMINA C</a></li>
+
+
+                    </ul>
+
+                </div>
+
+
+            </article>
+
+
+            <article id="c3" style="display: none;">
+
+
+                <h3 onclick="sh('suine')">СВИНІ</h3>
+
+                <div id="suine" class="collapsable" style="display: none;">
+
+                    <ul>
+
+
+                        <li><a href="/en/catalog/aminovit">AMINOVIT</a></li>
+
+
+                        <li><a href="/en/catalog/amoxicrid60">AMOXICRID 60%</a></li>
+
+
+                        <li><a href="/en/catalog/amoxicridretard15inj">AMOXICRID RETARD 15% inj</a></li>
+
+
+                        <li><a href="/en/catalog/apracyn">APRACYN</a></li>
+
+
+                        <li><a href="/en/catalog/ceftisol">CEFTISOL</a></li>
+
+
+                        <li><a href="/en/catalog/clamoxrtuinj">CLAMOX RTU inj</a></li>
+
+
+                        <li><a href="/en/catalog/clorcrid40premix">CLORCRID 40% PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/colicrid10">COLICRID 10%</a></li>
+
+
+                        <li><a href="/en/catalog/colicrid50">COLICRID 50%</a></li>
+
+
+                        <li><a href="/en/catalog/colistoppremix">COLISTOP PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/crimectininj">CRIMECTIN inj</a></li>
+
+
+                        <li><a href="/en/catalog/doxicol60">DOXICOL 60%</a></li>
+
+
+                        <li><a href="/en/catalog/enroflox5inj">ENROFLOX 5% inj</a></li>
+
+
+                        <li><a href="/en/catalog/enroflox10">ENROFLOX 10%</a></li>
+
+
+                        <li><a href="/en/catalog/enroflox10inj">ENROFLOX 10%</a></li>
+
+
+                        <li><a href="/en/catalog/enroflox40premix">ENROFLOX 40% PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/enrofloxmaxinj">ENROFLOX MAX inj</a></li>
+
+
+                        <li><a href="/en/catalog/enrofloxplusinj">ENROFLOX PLUS inj</a></li>
+
+
+                        <li><a href="/en/catalog/florcrid4premix">FLORCRID 4% PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/florcrid10">FLORCRID 10%</a></li>
+
+
+                        <li><a href="/en/catalog/florcrid25">FLORCRID 2.5%</a></li>
+
+
+                        <li><a href="/en/catalog/florcrid30inj">FLORCRID 30% inj</a></li>
+
+
+                        <li><a href="/en/catalog/flubendazol10premix">FLUBENDAZOL 10% PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/imunosuinpluspremix">IMUNOSUIN PLUS PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/levavermin">LEVAVERMIN</a></li>
+
+
+                        <li><a href="/en/catalog/lincomix10inj">LINCOMIX 10% inj</a></li>
+
+
+                        <li><a href="/en/catalog/lincomix60">LINCOMIX 60%</a></li>
+
+
+                        <li><a href="/en/catalog/lincomix300inj">LINCOMIX 300 inj</a></li>
+
+
+                        <li><a href="/en/catalog/marboxil100inj">MARBOXIL 100 inj</a></li>
+
+
+                        <li><a href="/en/catalog/neocen40">NEOCEN 40%</a></li>
+
+
+                        <li><a href="/en/catalog/oxicridpulv40">OXICRID PULV. 40%</a></li>
+
+
+                        <li><a href="/en/catalog/paracetamplus">PARACETAM PLUS</a></li>
+
+
+                        <li><a href="/en/catalog/penicilin30">PENICILIN 30</a></li>
+
+
+                        <li><a href="/en/catalog/salmoxolpremix">SALMOXOL PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/sintil60">SINTIL 60%</a></li>
+
+
+                        <li><a href="/en/catalog/spectolinj">SPECTOL inj</a></li>
+
+
+                        <li><a href="/en/catalog/streptopen">STREPTOPEN</a></li>
+
+
+                        <li><a href="/en/catalog/sulfatrim">SULFATRIM</a></li>
+
+
+                        <li><a href="/en/catalog/teraciclinla30inj">TERACICLIN LA 30% inj</a></li>
+
+
+                        <li><a href="/en/catalog/termixtim800">TERMIXTIM 800</a></li>
+
+
+                        <li><a href="/en/catalog/tiagen10">TIAGEN 10%</a></li>
+
+
+                        <li><a href="/en/catalog/tiagen80premix">TIAGEN 80% PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/tiagen800wsp">TIAGEN 800 WSP</a></li>
+
+
+                        <li><a href="/en/catalog/trimadoxinj">TRIMADOX inj</a></li>
+
+
+                        <li><a href="/en/catalog/tyloplus20">TYLOPLUS 20%</a></li>
+
+
+                        <li><a href="/en/catalog/tyloplus25">TYLOPLUS 25%</a></li>
+
+
+                        <li><a href="/en/catalog/uravitaamino">URAVITA-AMINO</a></li>
+
+
+                        <li><a href="/en/catalog/vitaminac">VITAMINA C</a></li>
+
+
+                    </ul>
+
+                </div>
+
+
+                <h3 onclick="sh('pasari')">СВІЙСЬКА ПТИЦЯ</h3>
+
+                <div id="pasari" class="collapsable" style="display: none;">
+
+                    <ul>
+
+
+                        <li><a href="/en/catalog/aminovit">AMINOVIT</a></li>
+
+
+                        <li><a href="/en/catalog/amoxicrid60">AMOXICRID 60%</a></li>
+
+
+                        <li><a href="/en/catalog/apracyn">APRACYN</a></li>
+
+
+                        <li><a href="/en/catalog/clorcrid40premix">CLORCRID 40% PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/colicrid10">COLICRID 10%</a></li>
+
+
+                        <li><a href="/en/catalog/colicrid50">COLICRID 50%</a></li>
+
+
+                        <li><a href="/en/catalog/doxicol60">DOXICOL 60%</a></li>
+
+
+                        <li><a href="/en/catalog/enroflox10">ENROFLOX 10%</a></li>
+
+
+                        <li><a href="/en/catalog/enroflox40premix">ENROFLOX 40% PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/florcrid10">FLORCRID 10%</a></li>
+
+
+                        <li><a href="/en/catalog/florcrid25">FLORCRID 2.5%</a></li>
+
+
+                        <li><a href="/en/catalog/flubendazol10premix">FLUBENDAZOL 10% PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/levavermin">LEVAVERMIN</a></li>
+
+
+                        <li><a href="/en/catalog/lincomix60">LINCOMIX 60%</a></li>
+
+
+                        <li><a href="/en/catalog/neocen40">NEOCEN 40%</a></li>
+
+
+                        <li><a href="/en/catalog/oxicridpulv40">OXICRID PULV. 40%</a></li>
+
+
+                        <li><a href="/en/catalog/salmoxolpremix">SALMOXOL PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/sintil60">SINTIL 60%</a></li>
+
+
+                        <li><a href="/en/catalog/spectolinj">SPECTOL inj</a></li>
+
+
+                        <li><a href="/en/catalog/sulfatrim">SULFATRIM</a></li>
+
+
+                        <li><a href="/en/catalog/tiagen10">TIAGEN 10%</a></li>
+
+
+                        <li><a href="/en/catalog/tiagen80premix">TIAGEN 80% PREMIX</a></li>
+
+
+                        <li><a href="/en/catalog/tyloplus20">TYLOPLUS 20%</a></li>
+
+
+                        <li><a href="/en/catalog/tyloplus25">TYLOPLUS 25%</a></li>
+
+
+                        <li><a href="/en/catalog/uravitaamino">URAVITA-AMINO</a></li>
+
+
+                        <li><a href="/en/catalog/vitaminac">VITAMINA C</a></li>
+
+
+                    </ul>
+
+                </div>
+
+
+                <h3 onclick="sh('rumegatoare-mari')">Large ruminants</h3>
+
+                <div id="rumegatoare-mari" class="collapsable" style="display: none;">
+
+                    <ul>
+
+
+                        <li><a href="/en/catalog/aminovit">AMINOVIT</a></li>
+
+
+                        <li><a href="/en/catalog/amoxicridretard15inj">AMOXICRID RETARD 15% inj</a></li>
+
+
+                        <li><a href="/en/catalog/cefmastdc">CEFMAST DC</a></li>
+
+
+                        <li><a href="/en/catalog/ceftisol">CEFTISOL</a></li>
+
+
+                        <li><a href="/en/catalog/clamoxlc">CLAMOX LC</a></li>
+
+
+                        <li><a href="/en/catalog/clamoxrtuinj">CLAMOX RTU inj</a></li>
+
+
+                        <li><a href="/en/catalog/cribendazol10">CRIBENDAZOL 10%</a></li>
+
+
+                        <li><a href="/en/catalog/crimectininj">CRIMECTIN inj</a></li>
+
+
+                        <li><a href="/en/catalog/crimectinplusinj">CRIMECTIN PLUS inj</a></li>
+
+
+                        <li><a href="/en/catalog/enroflox5inj">ENROFLOX 5% inj</a></li>
+
+
+                        <li><a href="/en/catalog/enroflox10inj">ENROFLOX 10%</a></li>
+
+
+                        <li><a href="/en/catalog/enrofloxmaxinj">ENROFLOX MAX inj</a></li>
+
+
+                        <li><a href="/en/catalog/enrofloxplusinj">ENROFLOX PLUS inj</a></li>
+
+
+                        <li><a href="/en/catalog/eprimecinj">EPRIMEC inj</a></li>
+
+
+                        <li><a href="/en/catalog/florcrid30inj">FLORCRID 30% inj</a></li>
+
+
+                        <li><a href="/en/catalog/keraseal">KERASEAL</a></li>
+
+
+                        <li><a href="/en/catalog/levavermin">LEVAVERMIN</a></li>
+
+
+                        <li><a href="/en/catalog/marboxil100inj">MARBOXIL 100 inj</a></li>
+
+
+                        <li><a href="/en/catalog/microcloxedc">MICROCLOX EDC </a></li>
+
+
+                        <li><a href="/en/catalog/penicilin30">PENICILIN 30</a></li>
+
+
+                        <li><a href="/en/catalog/spectolinj">SPECTOL inj</a></li>
+
+
+                        <li><a href="/en/catalog/streptopen">STREPTOPEN</a></li>
+
+
+                        <li><a href="/en/catalog/teraciclinla30inj">TERACICLIN LA 30% inj</a></li>
+
+
+                        <li><a href="/en/catalog/termixtim800">TERMIXTIM 800</a></li>
+
+
+                        <li><a href="/en/catalog/trimadoxinj">TRIMADOX inj</a></li>
+
+
+                        <li><a href="/en/catalog/tyloplusinj">TYLOPLUS inj</a></li>
+
+
+                        <li><a href="/en/catalog/uravitaamino">URAVITA-AMINO</a></li>
+
+
+                        <li><a href="/en/catalog/vitaminac">VITAMINA C</a></li>
+
+
+                    </ul>
+
+                </div>
+
+
+                <h3 onclick="sh('rumegatoare-mici')">Small ruminants</h3>
+
+                <div id="rumegatoare-mici" class="collapsable" style="display: none;">
+
+                    <ul>
+
+
+                        <li><a href="/en/catalog/aminovit">AMINOVIT</a></li>
+
+
+                        <li><a href="/en/catalog/amoxicridretard15inj">AMOXICRID RETARD 15% inj</a></li>
+
+
+                        <li><a href="/en/catalog/cribendazol25">CRIBENDAZOL 2.5%</a></li>
+
+
+                        <li><a href="/en/catalog/crimectininj">CRIMECTIN inj</a></li>
+
+
+                        <li><a href="/en/catalog/enroflox5inj">ENROFLOX 5% inj</a></li>
+
+
+                        <li><a href="/en/catalog/levavermin">LEVAVERMIN</a></li>
+
+
+                        <li><a href="/en/catalog/spectolinj">SPECTOL inj</a></li>
+
+
+                        <li><a href="/en/catalog/streptopen">STREPTOPEN</a></li>
+
+
+                        <li><a href="/en/catalog/teraciclinla30inj">TERACICLIN LA 30% inj</a></li>
+
+
+                        <li><a href="/en/catalog/trimadoxinj">TRIMADOX inj</a></li>
+
+
+                        <li><a href="/en/catalog/tyloplusinj">TYLOPLUS inj</a></li>
+
+
+                        <li><a href="/en/catalog/uravitaamino">URAVITA-AMINO</a></li>
+
+
+                        <li><a href="/en/catalog/vitaminac">VITAMINA C</a></li>
+
+
+                    </ul>
+
+                </div>
+
+
+                <h3 onclick="sh('animale-de-companie')">Pets</h3>
+
+                <div id="animale-de-companie" class="collapsable" style="display: none;">
+
+                    <ul>
+
+
+                        <li><a href="/en/catalog/amoxicridretard15inj">AMOXICRID RETARD 15% inj</a></li>
+
+
+                        <li><a href="/en/catalog/clamoxrtuinj">CLAMOX RTU inj</a></li>
+
+
+                        <li><a href="/en/catalog/enroflox5inj">ENROFLOX 5% inj</a></li>
+
+
+                        <li><a href="/en/catalog/lincomix10inj">LINCOMIX 10% inj</a></li>
+
+
+                        <li><a href="/en/catalog/penicilin30">PENICILIN 30</a></li>
+
+
+                        <li><a href="/en/catalog/spectolinj">SPECTOL inj</a></li>
+
+
+                        <li><a href="/en/catalog/streptopen">STREPTOPEN</a></li>
+
+
+                        <li><a href="/en/catalog/trimadoxinj">TRIMADOX inj</a></li>
+
+
+                        <li><a href="/en/catalog/vitaminac">VITAMINA C</a></li>
+
+
+                    </ul>
+
+                </div>
+
+
+            </article>
+
+
+        </section>
+
+        <script>
+            function sh(item) {
+                $(".collapsable").hide();
+                $("#" + item).toggle();
+            }
+
+            $(document).ready(function () {
+
+                $('#criteria-index #tab-links a').on('click', function (e) {
+                    var currentAttrValue = $(this).attr('href');
+                    $(currentAttrValue).show().siblings().hide();
+                    $(this).parent('li').addClass('active').siblings().removeClass('active');
+                    e.preventDefault();
+                });
+
+            });
+        </script>
+
+    </div>
+
+    <div id="footer">
+
+        <div id="footer-content">
+
+            <div id="copyright">2018. All rights reserved.<br>
+                Tempestada International Ltd.</div>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
