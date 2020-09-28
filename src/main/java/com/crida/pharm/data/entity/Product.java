@@ -22,7 +22,6 @@ public class Product {
     private String url;
 
 
-
     @ManyToMany
     private List<TargetSpecies> targetList;
     @ManyToOne

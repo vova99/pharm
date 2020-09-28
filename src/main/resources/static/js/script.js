@@ -69,3 +69,27 @@ const people = [
     searchInput.addEventListener("focusout", function(){
         clearList();
     } );
+
+
+    function sendCallBackRequest() {
+        var contactPerson = $('#contactPersonName').val();
+        var contactPhone = $('#contactPersonPhone').val();
+
+        $.ajax({
+            method: "post",
+            url: "/sendCallback",
+            contextType: "application/json",
+            data: {
+                contactPerson: contactPerson,
+                contactPhone: contactPhone,
+            },
+            traditional: true,
+            success: function () {
+                $('#callBackModal').modal('hide');
+                $('#thanksModal').modal('show');
+            },
+            error: function () {
+                alert("Error");
+            }
+        });
+    }
