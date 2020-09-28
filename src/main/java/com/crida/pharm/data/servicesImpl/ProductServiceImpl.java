@@ -83,6 +83,11 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public Product findByUnicUrl(String url) {
+        return productJPA.findByUnicUrl(url);
+    }
+
+    @Override
     public List<Product> findAll() {
         return productJPA.findAll();
     }
