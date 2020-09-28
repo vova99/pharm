@@ -118,6 +118,49 @@
         
     </div>
 
+    <div class="modal fade" id="callBackModal">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content">
+                <form action="bookCall">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Замовити дзвінок</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <label class="col-form-label" for="contactPersonName">Ім'я</label>
+                        <input type="text" class="form-control" id="contactPersonName" autofocus autocomplete="off"
+                               required="required" name="contactPerson">
+
+                        <label class="col-form-label" for="contactPersonPhone">Номер телефону</label>
+                        <input type="tel" class="form-control" id="contactPersonPhone" autocomplete="off"
+                               required="required" name="contactPhone" placeholder="(XXX) XXX-XXXX" data-inputmask-mask="(999) 999-9999">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Замовити</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Скасувати</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="cback">
+        <style>
+            .cback-circle {
+                background: #3CB868;
+                color: #3CB868;
+            }
+        </style>
+        <a data-toggle="modal" href="#callBackModal" data-placement="top" title="Замовити дзвінок">
+            <div class="cback-circle fn1"></div>
+            <div class="cback-circle fn2"></div>
+            <div class="cback-circle cback-circle--phone">
+                <i class='phone-icon'></i>
+            </div>
+        </a>
+    </div>
+
+
     <div id="footer">
 
         <div id="footer-content">
