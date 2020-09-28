@@ -84,7 +84,7 @@
 
                 <th:block th:each="form : ${formList}">
                     <h3 onclick="sh(this.id+'-par')" th:id="${form.name}" th:text="${form.name}">Injectable products</h3>
-                    <div th:id="${form.name}+'-par'" class="collapsable" style="display: none;">
+                    <div th:id="${form.name}+'-par'" class="collapsable">
                         <ul>
                             <li th:each="product:${form.products}"><a th:href="@{'/products-'+${product.url}}" th:text="${product.name}">AMOXICRID RETARD 15% inj</a></li>
                         </ul>
@@ -97,7 +97,7 @@
 
                 <th:block th:each="form : ${drugList}">
                     <h3 onclick="sh(this.id+'-par')" th:id="${form.name}" th:text="${form.name}">Injectable products</h3>
-                    <div th:id="${form.name}+'-par'" class="collapsable" style="display: none;">
+                    <div th:id="${form.name}+'-par'" class="collapsable">
                         <ul>
                             <li th:each="product:${form.products}"><a th:href="@{'/products-'+${product.url}}" th:text="${product.name}">AMOXICRID RETARD 15% inj</a></li>
                         </ul>
@@ -110,7 +110,7 @@
 
                 <th:block th:each="form : ${targetList}">
                     <h3 onclick="sh(this.id+'-par')" th:id="${form.name}" th:text="${form.name}">Injectable products</h3>
-                    <div th:id="${form.name}+'-par'" class="collapsable" style="display: none;">
+                    <div th:id="${form.name}+'-par'" class="collapsable">
                         <ul>
                             <li th:each="product:${form.products}"><a th:href="@{'/products-'+${product.url}}" th:text="${product.name}">AMOXICRID RETARD 15% inj</a></li>
                         </ul>
@@ -124,8 +124,8 @@
 
         <script>
             function sh(item) {
-                $(".collapsable").hide();
-                $("#" + item).toggle();
+                // $(".collapsable").hide();
+                // $("#" + item).toggle();
             }
 
             $(document).ready(function () {
