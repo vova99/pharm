@@ -1,12 +1,15 @@
 package com.crida.pharm.data.entity;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Data
+@Getter
+@Setter
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

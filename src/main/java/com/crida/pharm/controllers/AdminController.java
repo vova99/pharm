@@ -84,6 +84,10 @@ public class AdminController {
         model.addAttribute("drugList",drugClassService.findAll());
         model.addAttribute("pharmList",formService.findAll());
         model.addAttribute("targetList",targetSpeciesService.findAll());
+
+        System.out.println(drugClassService.findAll());
+        System.out.println(formService.findAll());
+        System.out.println(targetSpeciesService.findAll());
         model.addAttribute("fragmentPathTabConfig","adminDashboard");
         model.addAttribute("fragmentPathProducts","fragInfoProducts");
         model.addAttribute("tabName","products");
@@ -91,9 +95,9 @@ public class AdminController {
         return "adminPage";
     }
     @PostMapping("/editInfoProduct")
-    public String addDrugClass(Product product) {
+    public String editInfoProduct(Product product) {
         System.out.println(product);
-        productService.save(product);
+        productService.saveInfoObject(product);
 //        product.getTargetList().
         return "redirect:/admin/getAllProductList";
     }
@@ -104,6 +108,7 @@ public class AdminController {
     @GetMapping("/getAllDrugClassList")
     public String getAllDrugClassList(Model model){
         model.addAttribute("objectList",drugClassService.findAll());
+        System.out.println(drugClassService.findAll());
         model.addAttribute("fragmentPathTabConfig","adminDashboard");
         model.addAttribute("fragmentPathProducts","fragProducts");
         model.addAttribute("tabName","drugClass");
