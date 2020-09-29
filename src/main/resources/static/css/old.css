@@ -19,7 +19,7 @@ li { list-style-position: inside; list-style-type: none; }
 hr { border: 1px solid #5eb678; height: 5px; }
 
 a { font-weight: bold; text-decoration: none; color: #303030; }
-a:hover { text-decoration: underline; }
+a:hover { text-decoration: underline; color: #303030 }
 
 .odd { background-color: #eefff0; }
 .even { background-color: #ffffff; }
