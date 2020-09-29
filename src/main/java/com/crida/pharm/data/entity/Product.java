@@ -20,6 +20,8 @@ public class Product {
     private String bodyOfProduct;
     @Column(unique = true)
     private String url;
+    private String imgUrl;
+    private String activeComponent;
 
 
     @ManyToMany

@@ -34,7 +34,8 @@ public class MainController {
     }
 
     @GetMapping("/")
-    public String getIndex(){
+    public String getIndex(Model model){
+        model.addAttribute("productList",productService.findAll());
         return "index";
     }
 
@@ -43,17 +44,20 @@ public class MainController {
         model.addAttribute("formList",formService.findAll());
         model.addAttribute("drugList",drugClassService.findAll());
         model.addAttribute("targetList",targetSpeciesService.findAll());
+        model.addAttribute("productList",productService.findAll());
         return "products_orig";
     }
 
     @GetMapping("/products-{urlId}")
     public String getProduct(@PathVariable("urlId")String url, Model model){
         model.addAttribute("product",productService.findByUnicUrl(url));
+        model.addAttribute("productList",productService.findAll());
         return "product";
     }
 
     @GetMapping("/contacts")
-    public String getContacts(){
+    public String getContacts(Model model){
+        model.addAttribute("productList",productService.findAll());
         return "contacts";
     }
 

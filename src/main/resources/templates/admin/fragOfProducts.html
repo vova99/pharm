@@ -175,6 +175,17 @@
                </div>
                <div class="form-group row d-flex" style="align-items: flex-end">
                    <div class="col-6">
+                       <label class="col-form-label" for="editActiveComponent">Діюча речовина</label>
+                       <input type="text" class="form-control" id="editActiveComponent" required="required" autocomplete="off" placeholder="Не заповнено" name="activeComponent" th:value="${product?.activeComponent}">
+                   </div>
+
+                   <div class="col-6">
+                       <label class="control-label" for="editImgUrl" style="padding-top: 7px">Img url</label>
+                       <input type="text" class="form-control" id="editImgUrl" required="required" autocomplete="off" placeholder="Не заповнено" name="imgUrl" th:value="${product?.imgUrl}">
+                   </div>
+               </div>
+               <div class="form-group row d-flex" style="align-items: flex-end">
+                   <div class="col-6">
                        <label class="col-form-label" for="editPharmGroup">Фармацевтична форма</label>
                        <select class="form-control" id="editPharmGroup" name="pharmaceuticalForm.id">
                            <option th:each="pharm:${pharmList}" th:value="${pharm.id}" th:text="${pharm.name}" th:selected="${product?.pharmaceuticalForm?.id==pharm.id}"></option>

@@ -62,178 +62,20 @@
     </header>
 
     <div id="myDropdown" class="dropdown-content">
-        <a href="#about">
+        <a href="#about" th:each="product: ${productList}">
             <div class="row">
                 <div class="col-3" >
-                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
+                    <img th:src="${product.imgUrl}" width="100%">
                 </div>
                 <div class="col-9">
                     <div class="row">
-                        <h5>Name of product rsesdfsdf</h5>
-                            <h6>componentss  sdfsdfsfee</h6>
-                    </div>
-                </div>
-            </div>
-        </a>
-
-        <a href="#about">
-            <div class="row">
-                <div class="col-3" >
-                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
-                </div>
-                <div class="col-9">
-                    <div class="row">
-                        <h5>Name of product dgsdf</h5>
-                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a href="#about">
-            <div class="row">
-                <div class="col-3" >
-                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
-                </div>
-                <div class="col-9">
-                    <div class="row">
-                        <h5>Name of product dgsdf</h5>
-                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a href="#about">
-            <div class="row">
-                <div class="col-3" >
-                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
-                </div>
-                <div class="col-9">
-                    <div class="row">
-                        <h5>Name of product dgsdf</h5>
-                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a href="#about">
-            <div class="row">
-                <div class="col-3" >
-                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
-                </div>
-                <div class="col-9">
-                    <div class="row">
-                        <h5>Name of product dgsdf</h5>
-                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a href="#about">
-            <div class="row">
-                <div class="col-3" >
-                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
-                </div>
-                <div class="col-9">
-                    <div class="row">
-                        <h5>Name of product dgsdf</h5>
-                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a href="#about">
-            <div class="row">
-                <div class="col-3" >
-                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
-                </div>
-                <div class="col-9">
-                    <div class="row">
-                        <h5>Name of product dgsdf</h5>
-                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a href="#about">
-            <div class="row">
-                <div class="col-3" >
-                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
-                </div>
-                <div class="col-9">
-                    <div class="row">
-                        <h5>Name of product dgsdf</h5>
-                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a href="#about">
-            <div class="row">
-                <div class="col-3" >
-                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
-                </div>
-                <div class="col-9">
-                    <div class="row">
-                        <h5>Name of product dgsdf</h5>
-                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a href="#about">
-            <div class="row">
-                <div class="col-3" >
-                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
-                </div>
-                <div class="col-9">
-                    <div class="row">
-                        <h5>Name of product dgsdf</h5>
-                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
-                    </div>
-                </div>
-            </div>
-        </a>
-        <a href="#about">
-            <div class="row">
-                <div class="col-3" >
-                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
-                </div>
-                <div class="col-9">
-                    <div class="row">
-                        <h5>Name of product dgsdf</h5>
-                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
-                    </div>
-                </div>
-            </div>
-        </a> <a href="#about">
-        <div class="row">
-            <div class="col-3" >
-                <img src="media/products/amoxicridretard15inj.jpg" width="100%">
-            </div>
-            <div class="col-9">
-                <div class="row">
-                    <h5>Name of product dgsdf</h5>
-                    <h6>component assaewewrwegvxcvzxvsdgve</h6>
-                </div>
-            </div>
-        </div>
-    </a>
-
-        <a href="#about">
-            <div class="row">
-                <div class="col-3" >
-                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
-                </div>
-                <div class="col-9">
-                    <div class="row">
-                        <h5>Name of productsdgg sfsdf d sdfdfsdfs</h5>
-                        <h6>component sevrwecrawef  weeca</h6>
+                        <h5 th:text="${product.name}">Name of product rsesdfsdf</h5>
+                        <h6 th:text="${product.activeComponent}">componentss  sdfsdfsfee</h6>
                     </div>
                 </div>
             </div>
         </a>
     </div>
-
     <div id="body-content">
 
         <h1>ПРОДУКТИ</h1>
