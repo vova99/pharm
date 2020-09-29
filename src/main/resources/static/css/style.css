@@ -128,6 +128,36 @@ body .cback .phone-icon {
 #thanksModal .modal-content .modal-footer {
   border-top: none; }
 
+.dropdown-content {
+  position: absolute;
+  top: 4.6em;
+  width: 45%;
+  margin-left: 50%;
+  background-color: white;
+  border: 1px solid #5eb678;
+  border-radius: 5px;
+  z-index: 999;
+  display: none;
+  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.3);
+  max-height: 80vh;
+  overflow: auto; }
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: none; }
+.dropdown-content a h5 {
+  width: 100%; }
+.dropdown-content a h6 {
+  width: 100%;
+  color: #999 !important; }
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: #5eb678;
+  text-decoration: none; }
+
 header {
   background-color: #ffffff;
   margin-bottom: 40px;
@@ -200,7 +230,13 @@ header .navbar .navbar-nav .sep {
     display: none; }
   header .navbar {
     padding-top: 0;
-    padding-bottom: 0; } }
+    padding-bottom: 0; }
+  .dropdown-content {
+    top: 4rem;
+    max-height: 75vh;
+    overflow: auto;
+    width: 96%;
+    margin-left: 2%; } }
 
 @media (min-width: 321px) and (max-width: 544px) {
   header nav .logo {
@@ -217,7 +253,13 @@ header .navbar .navbar-nav .sep {
     display: none; }
   header .navbar {
     padding-top: 0;
-    padding-bottom: 0; } }
+    padding-bottom: 0; }
+  .dropdown-content {
+    top: 4rem;
+    max-height: 75vh;
+    overflow: auto;
+    width: 96%;
+    margin-left: 2%; } }
 
 @media (min-width: 545px) and (max-width: 768px) {
   header nav .logo {
@@ -234,7 +276,13 @@ header .navbar .navbar-nav .sep {
     display: none; }
   header .navbar {
     padding-top: 0;
-    padding-bottom: 0; } }
+    padding-bottom: 0; }
+  .dropdown-content {
+    top: 4rem;
+    max-height: 75vh;
+    overflow: auto;
+    width: 90%;
+    margin-left: 5%; } }
 
 @media (min-width: 769px) and (max-width: 992px) {
   header nav .logo {
@@ -246,7 +294,10 @@ header .navbar .navbar-nav .sep {
   header .navbar .navbar-nav li {
     display: inline-block;
     font-size: 1em;
-    padding: 1.2em 0 1em 0; } }
+    padding: 1.2em 0 1em 0; }
+  .dropdown-content {
+    width: 60%;
+    margin-left: 35%; } }
 
 @media (min-width: 993px) and (max-width: 1200px) {
   header nav .logo .logo-sm {

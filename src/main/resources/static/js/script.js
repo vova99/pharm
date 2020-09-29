@@ -1,74 +1,64 @@
-const people = [
-    { name: 'google', link: "https://www.google.com/"},
-    { name: 'googel', link: "https://www.google.com/"},
-    { name: 'youtube', link: "https://www.youtube.com/"}
-    ];
-    
-    const list = document.getElementById('list');
-    
-    function setList(group) {
-        clearList();
-        for (const person of group) {
-            var item = document.createElement('a');
-            item.href = person.link;
-            item.classList.add('list-group-item');
-            const text = document.createTextNode(person.name);
-            item.appendChild(text);
-            list.appendChild(item);
-            
-        }
-        if (group.length === 0){
-            setNoResults();
-        }
+document.getElementById("desctopSearch").addEventListener("focus", function() {
+    var div = document.getElementById("myDropdown");
+    div.style.display = "block";
+    var a = div.getElementsByTagName("a");
+    for (var i = 0; i < a.length; i++) {
+        a[i].style.display = "block";
     }
-    
-    
-    function clearList() {
-        while(list.firstChild){
-        list.removeChild(list.firstChild);
-        }
-    }
-    
-    function setNoResults() {
-            const item = document.createElement('li');
-            item.classList.add('list-group-item');
-            const text = document.createTextNode("Не знайдено");
-            item.appendChild(text);
-            list.appendChild(item);
-    }
-    
-    function getRelevancy(value,searchTerm) {
-        if (value === searchTerm) {
-            return 2;
-        } else if (value.starsWith(searchTerm)) {
-            return 1;
-        } else if (value.includes(searchTerm)) {
-            return 0;
-        }
-    }
-    
-    
-    const searchInput = document.getElementById('search');
-    
-    searchInput.addEventListener('input', (event) => {
-    let value = event.target.value;
-        if (value && value.trim().length > 0) {
-            value = value.trim().toLowerCase();
-            setList(people.filter(person =>{
-                return person.name.includes(value);
-            }).sort((personA, personB) => {
-                return getRelevancy(personB.name, value) - getRelevancy(personA.name, value);
-            
-            }));
-        
-        } else {
-        clearList();
-        }
-    });
+});
 
-    searchInput.addEventListener("focusout", function(){
-        clearList();
-    } );
+document.getElementById("desctopSearch").addEventListener("focusout", function() {
+    var div = document.getElementById("myDropdown");
+    div.style.display = "none";
+    var a = div.getElementsByTagName("a");
+    for (var i = 0; i < a.length; i++) {
+        a[i].style.display = "none";
+    }
+});
+
+document.getElementById("mobileSearch").addEventListener("focus", function() {
+    var div = document.getElementById("myDropdown");
+    div.style.display = "block";
+    var a = div.getElementsByTagName("a");
+    for (var i = 0; i < a.length; i++) {
+        a[i].style.display = "block";
+    }
+});
+
+document.getElementById("mobileSearch").addEventListener("focusout", function() {
+    var div = document.getElementById("myDropdown");
+    div.style.display = "none";
+    var a = div.getElementsByTagName("a");
+    for (var i = 0; i < a.length; i++) {
+        a[i].style.display = "none";
+    }
+});
+
+function filterFunction(id) {
+    var input, filter, a, i;
+    var count = 0;
+    input = document.getElementById(id);
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+
+    for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "block";
+            count++;
+            console.log(count);
+        } else {
+            a[i].style.display = "none";
+            count--;
+            console.log(count);
+        }
+    }
+
+    if(count<=0){
+        console.log("last exit:"+count);
+    }
+}
 
 
     function sendCallBackRequest() {

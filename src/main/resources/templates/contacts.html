@@ -25,7 +25,7 @@
                 <img src="img/logo-sm.png" alt="" class="logo-sm">
             </div>
 
-            <input type="search" class="mobileSearch form-control" placeholder="Пошук...">
+            <input type="search" class="mobileSearch form-control" id="mobileSearch" placeholder="Пошук..." oninput="filterFunction(this.id)">
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03"
                 aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,8 +46,8 @@
                         <a class="nav-link active" href="/contacts">КОНТАКТИ</a>
                     </li>
                     <li class="nav-item">
-                        <input class="form-control desctopSearch" type="search" placeholder="Пошук..." id="search" name="search"
-                               autocomplete="off">
+                        <input class="form-control desctopSearch" type="search" placeholder="Пошук..." id="desctopSearch"
+                               name="search" autocomplete="off" oninput="filterFunction(this.id)">
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="http://www.cridapharm.ro/en/catalog" id="lang-selector">EN</a>
@@ -55,9 +55,180 @@
                 </ul>
             </div>
         </nav>
-        <ul class="list-group" id="list"
-            style="width: 50%; margin: 0 auto; position: absolute; z-index: 9999; right: 0;"></ul>
     </header>
+
+    <div id="myDropdown" class="dropdown-content">
+        <a href="#about">
+            <div class="row">
+                <div class="col-3" >
+                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
+                </div>
+                <div class="col-9">
+                    <div class="row">
+                        <h5>Name of product rsesdfsdf<h5>
+                            <h6>componentss  sdfsdfsfee</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="#about">
+            <div class="row">
+                <div class="col-3" >
+                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
+                </div>
+                <div class="col-9">
+                    <div class="row">
+                        <h5>Name of product dgsdf</h5>
+                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="#about">
+            <div class="row">
+                <div class="col-3" >
+                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
+                </div>
+                <div class="col-9">
+                    <div class="row">
+                        <h5>Name of product dgsdf</h5>
+                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="#about">
+            <div class="row">
+                <div class="col-3" >
+                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
+                </div>
+                <div class="col-9">
+                    <div class="row">
+                        <h5>Name of product dgsdf</h5>
+                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="#about">
+            <div class="row">
+                <div class="col-3" >
+                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
+                </div>
+                <div class="col-9">
+                    <div class="row">
+                        <h5>Name of product dgsdf</h5>
+                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="#about">
+            <div class="row">
+                <div class="col-3" >
+                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
+                </div>
+                <div class="col-9">
+                    <div class="row">
+                        <h5>Name of product dgsdf</h5>
+                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="#about">
+            <div class="row">
+                <div class="col-3" >
+                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
+                </div>
+                <div class="col-9">
+                    <div class="row">
+                        <h5>Name of product dgsdf</h5>
+                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="#about">
+            <div class="row">
+                <div class="col-3" >
+                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
+                </div>
+                <div class="col-9">
+                    <div class="row">
+                        <h5>Name of product dgsdf</h5>
+                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="#about">
+            <div class="row">
+                <div class="col-3" >
+                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
+                </div>
+                <div class="col-9">
+                    <div class="row">
+                        <h5>Name of product dgsdf</h5>
+                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="#about">
+            <div class="row">
+                <div class="col-3" >
+                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
+                </div>
+                <div class="col-9">
+                    <div class="row">
+                        <h5>Name of product dgsdf</h5>
+                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="#about">
+            <div class="row">
+                <div class="col-3" >
+                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
+                </div>
+                <div class="col-9">
+                    <div class="row">
+                        <h5>Name of product dgsdf</h5>
+                        <h6>component assaewewrwegvxcvzxvsdgve</h6>
+                    </div>
+                </div>
+            </div>
+        </a> <a href="#about">
+        <div class="row">
+            <div class="col-3" >
+                <img src="media/products/amoxicridretard15inj.jpg" width="100%">
+            </div>
+            <div class="col-9">
+                <div class="row">
+                    <h5>Name of product dgsdf</h5>
+                    <h6>component assaewewrwegvxcvzxvsdgve</h6>
+                </div>
+            </div>
+        </div>
+    </a>
+
+        <a href="#about">
+            <div class="row">
+                <div class="col-3" >
+                    <img src="media/products/amoxicridretard15inj.jpg" width="100%">
+                </div>
+                <div class="col-9">
+                    <div class="row">
+                        <h5>Name of productsdgg sfsdf d sdfdfsdfs</h5>
+                        <h6>component sevrwecrawef  weeca</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
 
 
     <div id="body-content">
