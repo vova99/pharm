@@ -39,6 +39,12 @@ public class MainController {
         return "index";
     }
 
+    @GetMapping("/test")
+    public String test(Model model){
+        model.addAttribute("productList",productService.findAll());
+        return "index-copy";
+    }
+
     @GetMapping("/products")
     public String getProducts(Model model){
         model.addAttribute("formList",formService.findAll());
