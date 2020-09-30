@@ -131,8 +131,8 @@ body .cback .phone-icon {
 .dropdown-content {
   position: absolute;
   top: 4.6em;
-  width: 45%;
-  margin-left: 50%;
+  width: 40%;
+  margin-left: 55%;
   background-color: white;
   border: 1px solid #5eb678;
   border-radius: 5px;
@@ -214,6 +214,27 @@ header .navbar .navbar-nav li a:hover {
   text-decoration: underline; }
 header .navbar .navbar-nav .sep {
   line-height: 2.7rem; }
+
+.carousel .carousel-inner .carousel-item {
+  height: 75vh;
+  vertical-align: middle; }
+.carousel .carousel-inner .carousel-item img {
+  min-width: 100vw;
+  max-width: 100%;
+  height: inherit;
+  object-fit: cover; }
+.carousel .carousel-inner .carousel-item .carousel-caption {
+  top: 60%;
+  width: fit-content;
+  left: 10vw;
+  background-color: rgba(255, 255, 255, 0.5); }
+.carousel .carousel-inner .carousel-item .carousel-caption h5 {
+  font-size: 4rem;
+  padding: 1rem 3rem;
+  border-top: 4px solid #5eb678;
+  border-bottom: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 60px black; }
 
 @media (min-width: 0) and (max-width: 320px) {
   header nav .logo {
