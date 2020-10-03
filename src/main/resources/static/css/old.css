@@ -24,7 +24,7 @@ a:hover { text-decoration: underline; color: #303030 }
 .odd { background-color: #eefff0; }
 .even { background-color: #ffffff; }
 
-#map-oltenita, #map-bucharest { height: 315px; border-top: 3px solid #5eb678; border-bottom: 3px solid #5eb678; margin-bottom: 40px; }
+#map-oltenita, #map-lviv { height: 315px; border-top: 3px solid #5eb678; border-bottom: 3px solid #5eb678; margin-bottom: 40px; }
 .infobox { margin-top: 40px; }
 
 /* form {
