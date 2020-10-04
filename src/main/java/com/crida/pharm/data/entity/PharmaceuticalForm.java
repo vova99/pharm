@@ -1,5 +1,6 @@
 package com.crida.pharm.data.entity;
 
+import com.crida.pharm.data.StatusOfEntity;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,6 +16,7 @@ public class PharmaceuticalForm {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+    private StatusOfEntity statusOfEntity = StatusOfEntity.ACTIVE;
     @ManyToMany(fetch = FetchType.LAZY)
     private List<Product> products;
 

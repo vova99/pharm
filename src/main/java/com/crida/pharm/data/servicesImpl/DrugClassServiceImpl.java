@@ -1,6 +1,8 @@
 package com.crida.pharm.data.servicesImpl;
 
+import com.crida.pharm.data.StatusOfEntity;
 import com.crida.pharm.data.entity.DrugClass;
+import com.crida.pharm.data.entity.PharmaceuticalForm;
 import com.crida.pharm.data.jpa.DrugClassJPA;
 import com.crida.pharm.data.services.DrugClassService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +36,18 @@ public class DrugClassServiceImpl implements DrugClassService {
     }
 
     @Override
+    public List<DrugClass> findByStatus(StatusOfEntity status) {
+        return drugClassJPA.findByStatus(status);
+    }
+
+    @Override
     public void deleteByID(int id) {
-        drugClassJPA.deleteById(id);
+        DrugClass drug = drugClassJPA.getOne(id);
+        if (drug.getStatusOfEntity()== StatusOfEntity.ARCHIVED){
+            drug.setStatusOfEntity(StatusOfEntity.ACTIVE);
+        }else {
+            drug.setStatusOfEntity(StatusOfEntity.ARCHIVED);
+        }
+        drugClassJPA.save(drug);
     }
 }

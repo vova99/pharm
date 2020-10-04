@@ -1,5 +1,6 @@
 package com.crida.pharm.data.servicesImpl;
 
+import com.crida.pharm.data.StatusOfEntity;
 import com.crida.pharm.data.entity.DrugClass;
 import com.crida.pharm.data.entity.PharmaceuticalForm;
 import com.crida.pharm.data.entity.Product;
@@ -92,6 +93,11 @@ public class ProductServiceImpl implements ProductService {
         return productJPA.findAll();
     }
 
+    @Override
+    public List<Product> findByStatus(StatusOfEntity status) {
+        return productJPA.findByStatus(status);
+    }
+
 
     //not using
     @Override
@@ -107,6 +113,12 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public void deleteByID(int id) {
-        productJPA.deleteById(id);
+        Product productDB = productJPA.getOne(id);
+        if (productDB.getStatusOfEntity()== StatusOfEntity.ARCHIVED){
+            productDB.setStatusOfEntity(StatusOfEntity.ACTIVE);
+        }else {
+            productDB.setStatusOfEntity(StatusOfEntity.ARCHIVED);
+        }
+        productJPA.save(productDB);
     }
 }

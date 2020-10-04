@@ -1,5 +1,6 @@
 package com.crida.pharm.data.servicesImpl;
 
+import com.crida.pharm.data.StatusOfEntity;
 import com.crida.pharm.data.entity.TargetSpecies;
 import com.crida.pharm.data.jpa.TargetSpeciesJPA;
 import com.crida.pharm.data.services.TargetSpeciesService;
@@ -33,7 +34,18 @@ public class TargetSpeciesServiceImpl implements TargetSpeciesService {
     }
 
     @Override
+    public List<TargetSpecies> findByStatus(StatusOfEntity status) {
+        return targetSpeciesJPA.findByStatus(status);
+    }
+
+    @Override
     public void deleteByID(int id) {
-        targetSpeciesJPA.deleteById(id);
+        TargetSpecies targetSpecies = targetSpeciesJPA.getOne(id);
+        if (targetSpecies.getStatusOfEntity()== StatusOfEntity.ARCHIVED){
+            targetSpecies.setStatusOfEntity(StatusOfEntity.ACTIVE);
+        }else {
+            targetSpecies.setStatusOfEntity(StatusOfEntity.ARCHIVED);
+        }
+        targetSpeciesJPA.save(targetSpecies);
     }
 }

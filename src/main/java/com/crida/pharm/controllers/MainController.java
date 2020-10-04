@@ -1,5 +1,6 @@
 package com.crida.pharm.controllers;
 
+import com.crida.pharm.data.StatusOfEntity;
 import com.crida.pharm.data.services.DrugClassService;
 import com.crida.pharm.data.services.PharmaceuticalFormService;
 import com.crida.pharm.data.services.ProductService;
@@ -35,35 +36,35 @@ public class MainController {
 
     @GetMapping("/")
     public String getIndex(Model model){
-        model.addAttribute("productList",productService.findAll());
+        model.addAttribute("productList",productService.findByStatus(StatusOfEntity.ACTIVE));
         return "index";
     }
 
     @GetMapping("/test")
     public String test(Model model){
-        model.addAttribute("productList",productService.findAll());
+        model.addAttribute("productList",productService.findByStatus(StatusOfEntity.ACTIVE));
         return "index-copy";
     }
 
     @GetMapping("/products")
     public String getProducts(Model model){
-        model.addAttribute("formList",formService.findAll());
-        model.addAttribute("drugList",drugClassService.findAll());
-        model.addAttribute("targetList",targetSpeciesService.findAll());
-        model.addAttribute("productList",productService.findAll());
+        model.addAttribute("formList",formService.findByStatus(StatusOfEntity.ACTIVE));
+        model.addAttribute("drugList",drugClassService.findByStatus(StatusOfEntity.ACTIVE));
+        model.addAttribute("targetList",targetSpeciesService.findByStatus(StatusOfEntity.ACTIVE));
+        model.addAttribute("productList",productService.findByStatus(StatusOfEntity.ACTIVE));
         return "products_orig";
     }
 
     @GetMapping("/products-{urlId}")
     public String getProduct(@PathVariable("urlId")String url, Model model){
         model.addAttribute("product",productService.findByUnicUrl(url));
-        model.addAttribute("productList",productService.findAll());
+        model.addAttribute("productList",productService.findByStatus(StatusOfEntity.ACTIVE));
         return "product";
     }
 
     @GetMapping("/contacts")
     public String getContacts(Model model){
-        model.addAttribute("productList",productService.findAll());
+        model.addAttribute("productList",productService.findByStatus(StatusOfEntity.ACTIVE));
         return "contacts";
     }
 

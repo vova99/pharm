@@ -7,13 +7,15 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Название</th>
+                <th scope="col">Status</th>
                 <th></th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="b : ${objectList}" th:id="${b.id}">
                 <td th:text="${b.id}"></td>
-                <td scope="row" th:text="${b.name}"></td>
+                <td scope="row" th:text="${b?.name}"></td>
+                <td scope="row" th:text="${b?.statusOfEntity}"></td>
                 <td>
                     <a th:if="${infoBtnOn!=null}" class="btn btn-primary btn-sm" th:href="@{${urlInfo}+'-'+${b.id}}"><i class="fas fa-info-circle" data-toggle="tooltip" title="Подробно"></i></a>
                     <button type="button" class="btn btn-primary btn-sm" onclick="editProduct(this)"><i class="fas fa-pen" data-toggle="tooltip" title="Редактировать"></i></button>
@@ -26,6 +28,7 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Название</th>
+                <th scope="col">Status</th>
                 <th></th>
             </tr>
             </tfoot>

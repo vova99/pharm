@@ -1,5 +1,6 @@
 package com.crida.pharm.data.entity;
 
+import com.crida.pharm.data.StatusOfEntity;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,6 +23,7 @@ public class Product {
     private String url;
     private String imgUrl;
     private String activeComponent;
+    private StatusOfEntity statusOfEntity = StatusOfEntity.ACTIVE;
 
 
     @ManyToMany

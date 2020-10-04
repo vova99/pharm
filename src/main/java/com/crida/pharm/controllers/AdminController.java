@@ -213,7 +213,7 @@ public class AdminController {
         return "redirect:/admin/getAllPharmaceuticalFormList";
     }
 
-    @PostMapping("/deletePharmaceuticalForm-{productId}")
+    @PostMapping("/deletePharmaceuticalForm")
     public String deletePharmaceuticalForm(String id){
         formService.deleteByID(Integer.parseInt(id));
         return "redirect:/admin/getAllPharmaceuticalFormList";
