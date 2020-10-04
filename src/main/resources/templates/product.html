@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="ru"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -75,9 +78,9 @@
 
     <div id="body-content">
 
-        <h1 th:text="${product.name}"></h1>
-        <img th:src="${product.imgUrl}" style="float: right; max-width: 100%;">
-        <h1 th:utext="${product.bodyOfProduct}"></h1>
+        <h1 th:text="${product?.name}"></h1>
+        <img th:src="@{'../img/imgProducts/'+${product?.imgUrl}}" style="max-width: 100%; display: inline" width="300" height="300">
+        <div th:utext="${product?.bodyOfProduct}"></div>
         
     </div>
 
