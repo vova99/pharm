@@ -79,7 +79,7 @@
     <div id="body-content">
 
         <h1 th:text="${product?.name}"></h1>
-        <img th:src="@{'../img/imgProducts/'+${product?.imgUrl}}" style="max-width: 100%; display: inline" width="300" height="300">
+        <img th:src="@{'../img/imgProducts/'+${product?.imgUrl}}" style="float: right; max-width: 100%;">
         <div th:utext="${product?.bodyOfProduct}"></div>
         
     </div>

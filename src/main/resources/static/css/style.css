@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
 body {
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
@@ -235,6 +236,160 @@ header .navbar .navbar-nav .sep {
   border-bottom: 1px solid white;
   background-color: rgba(255, 255, 255, 0.5);
   text-shadow: 0 0 60px black; }
+
+.video {
+  padding-bottom: 4.5rem;
+  background-image: url("../img/background.png");
+  background-size: contain;
+  background-attachment: fixed;
+  background-repeat: no-repeat; }
+.video h1 {
+  text-align: center;
+  font-size: 4rem;
+  color: #303030;
+  margin: 2rem auto 0; }
+.video hr {
+  margin: 0 auto 2rem auto;
+  background-color: #5eb678;
+  height: 4px;
+  width: 10%;
+  border-radius: 3px; }
+.video .video-description {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85); }
+.video .video-description h1 {
+  font-size: 2rem;
+  text-decoration: none;
+  margin-bottom: 1.2rem;
+  color: #5eb678;
+  width: fit-content; }
+.video .video-description p {
+  font-size: 1.1rem;
+  line-height: 1.3;
+  font-family: 'Roboto', sans-serif; }
+.video .videoframe {
+  height: 50vh; }
+
+.activities {
+  background-color: #f1f1f1;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white; }
+.activities .row .picture {
+  background-position: center;
+  background-size: cover;
+  height: 50vh; }
+.activities .row .description {
+  padding: 3rem 2rem 1rem;
+  text-align: center;
+  height: 50vh;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out; }
+.activities .row .description h1 {
+  font-size: 1.5rem; }
+.activities .row .description a {
+  color: #303030; }
+.activities .row .description a:hover {
+  text-decoration-color: #5eb678; }
+.activities .row .description:hover {
+  background-color: #fff;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out; }
+
+.team {
+  background-color: white;
+  padding-top: 2rem;
+  padding-bottom: 3rem; }
+.team h1 {
+  text-align: center;
+  font-size: 4rem;
+  color: #303030;
+  margin: 0;
+  letter-spacing: -1px; }
+.team hr {
+  margin: 0 auto 2rem auto;
+  background-color: #5eb678;
+  height: 4px;
+  width: 10%;
+  border-radius: 3px; }
+
+.counter {
+  background-color: white;
+  background-image: url(../img/products-banner.jpg);
+  background-attachment: fixed;
+  background-position-y: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 55vh;
+  overflow: hidden;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  text-align: center; }
+.counter h1 {
+  text-align: center;
+  font-size: 4rem;
+  color: white;
+  margin: 0;
+  letter-spacing: -1px; }
+.counter hr {
+  margin: 0 auto 2rem auto;
+  background-color: #5eb678;
+  height: 4px;
+  width: 10%;
+  border-radius: 3px; }
+.counter .stats {
+  width: 100%;
+  margin-top: 2em;
+  display: inline-flex;
+  justify-content: space-evenly; }
+.counter .stats li {
+  background-color: white;
+  text-align: center;
+  font-size: 4rem;
+  padding: 1rem 2rem;
+  box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 3px; }
+.counter .stats li hr {
+  margin: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #dee2e6;
+  border: none; }
+.counter .stats li p {
+  max-width: 15vw;
+  font-size: 1.5rem;
+  margin-bottom: 0; }
+
+.footer {
+  height: 16vh;
+  background-color: black;
+  background-image: url(../img/footer-background-300x98.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 8vw;
+  padding-right: 5vw; }
+.footer img {
+  transition: .05s ease-in-out; }
+.footer img:hover {
+  transform: scale(1.05);
+  transition: .05s ease-in-out; }
+.footer a {
+  display: block;
+  margin-right: 1rem;
+  color: #f1f1f1;
+  font-size: 1.3rem; }
+.footer a:hover {
+  text-decoration: underline;
+  text-decoration-color: #5eb678;
+  transition: .2s ease-in-out;
+  color: #fff; }
+.footer p {
+  display: block;
+  margin-bottom: 0;
+  color: #f1f1f1;
+  font-size: 1rem; }
 
 @media (min-width: 0) and (max-width: 320px) {
   header nav .logo {
