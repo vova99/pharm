@@ -9,11 +9,13 @@ document.getElementById("desctopSearch").addEventListener("focus", function() {
 
 document.getElementById("desctopSearch").addEventListener("focusout", function() {
     var div = document.getElementById("myDropdown");
-    div.style.display = "none";
-    var a = div.getElementsByTagName("a");
-    for (var i = 0; i < a.length; i++) {
-        a[i].style.display = "none";
-    }
+    setTimeout(function() {
+        div.style.display = "none";
+        var a = div.getElementsByTagName("a");
+        for (var i = 0; i < a.length; i++) {
+            a[i].style.display = "none";
+        }
+    }, 100);
 });
 
 document.getElementById("mobileSearch").addEventListener("focus", function() {
@@ -27,12 +29,19 @@ document.getElementById("mobileSearch").addEventListener("focus", function() {
 
 document.getElementById("mobileSearch").addEventListener("focusout", function() {
     var div = document.getElementById("myDropdown");
-    div.style.display = "none";
-    var a = div.getElementsByTagName("a");
-    for (var i = 0; i < a.length; i++) {
-        a[i].style.display = "none";
-    }
+    setTimeout(function() {
+        div.style.display = "none";
+        var a = div.getElementsByTagName("a");
+        for (var i = 0; i < a.length; i++) {
+            a[i].style.display = "none";
+        }
+    }, 100);
 });
+
+function click(obj) {
+    console.log("click");
+    window.location.href(obj.parent.href);
+}
 
 function filterFunction(id) {
     var input, filter, a, i;

@@ -60,8 +60,8 @@
     </header>
 
     <div id="myDropdown" class="dropdown-content">
-        <a th:href="@{'/products-'+${product.url}}" th:each="product: ${productList}">
-            <div class="row">
+        <a th:href="@{'/products-'+${product.url}}" th:each="product: ${productList}" >
+            <div class="row" >
                 <div class="col-3" >
                     <img th:src="@{'../img/imgProducts/'+${product?.imgUrl}}" width="100%">
                 </div>
