@@ -137,15 +137,13 @@ body .cback .phone-icon {
   background-color: white;
   border: 1px solid #5eb678;
   border-radius: 5px;
-  z-index: 500;
+  z-index: 1488;
   display: none;
   box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.3);
   max-height: 80vh;
   overflow: auto; }
 
 .dropdown-content a {
-  /*pointer-events: auto !important;*/
-  /*cursor: pointer !important;*/
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -227,24 +225,29 @@ header .navbar .navbar-nav .sep {
   height: inherit;
   object-fit: cover; }
 .carousel .carousel-inner .carousel-item .carousel-caption {
-  top: 60%;
-  width: fit-content;
-  left: 10vw;
+  top: 50%;
+  width: 70%;
+  height: fit-content;
+  left: 15%;
   background-color: rgba(255, 255, 255, 0.5); }
 .carousel .carousel-inner .carousel-item .carousel-caption h5 {
   font-size: 4rem;
   padding: 1rem 3rem;
   border-top: 4px solid #5eb678;
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid white;
   background-color: rgba(255, 255, 255, 0.5);
   text-shadow: 0 0 60px black; }
 
 .video {
   padding-bottom: 4.5rem;
-  background-image: url("../img/background.png");
+  background-image: url("../img/hiclipart.com (1).png");
   background-size: contain;
   background-attachment: fixed;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column; }
 .video h1 {
   text-align: center;
   font-size: 4rem;
@@ -258,7 +261,8 @@ header .navbar .navbar-nav .sep {
   border-radius: 3px; }
 .video .video-description {
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.85); }
+  background-color: rgba(255, 255, 255, 0.85);
+  padding-bottom: 1rem; }
 .video .video-description h1 {
   font-size: 2rem;
   text-decoration: none;
@@ -269,8 +273,24 @@ header .navbar .navbar-nav .sep {
   font-size: 1.1rem;
   line-height: 1.3;
   font-family: 'Roboto', sans-serif; }
+.video .video-description a {
+  text-align: center;
+  padding: 0.5rem;
+  vertical-align: middle;
+  border: 1px solid white;
+  color: black;
+  border-radius: 0.5rem;
+  transition: .2s ease-in-out; }
+.video .video-description a img {
+  vertical-align: top; }
+.video .video-description a:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #5eb678;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  transition: .2s ease-in-out; }
 .video .videoframe {
-  height: 50vh; }
+  height: 55vh; }
 
 .activities {
   background-color: #f1f1f1;
@@ -281,11 +301,12 @@ header .navbar .navbar-nav .sep {
   background-size: cover;
   height: 50vh; }
 .activities .row .description {
-  padding: 3rem 2rem 1rem;
+  padding: 1rem 2rem 1rem;
   text-align: center;
   height: 50vh;
   -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out; }
+  transition: .2s ease-in-out;
+  vertical-align: middle; }
 .activities .row .description h1 {
   font-size: 1.5rem; }
 .activities .row .description a {
@@ -297,23 +318,6 @@ header .navbar .navbar-nav .sep {
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out; }
 
-.team {
-  background-color: white;
-  padding-top: 2rem;
-  padding-bottom: 3rem; }
-.team h1 {
-  text-align: center;
-  font-size: 4rem;
-  color: #303030;
-  margin: 0;
-  letter-spacing: -1px; }
-.team hr {
-  margin: 0 auto 2rem auto;
-  background-color: #5eb678;
-  height: 4px;
-  width: 10%;
-  border-radius: 3px; }
-
 .counter {
   background-color: white;
   background-image: url(../img/products-banner.jpg);
@@ -321,7 +325,7 @@ header .navbar .navbar-nav .sep {
   background-position-y: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 55vh;
+  height: 70vh;
   overflow: hidden;
   padding-top: 2rem;
   padding-bottom: 3rem;
@@ -361,6 +365,37 @@ header .navbar .navbar-nav .sep {
   font-size: 1.5rem;
   margin-bottom: 0; }
 
+.ukraine {
+  padding-bottom: 4.5rem;
+  background-image: url(../img/hiclipartcom.png);
+  background-position-y: top;
+  background-size: cover;
+  background-repeat: no-repeat; }
+.ukraine h1 {
+  text-align: center;
+  font-size: 4rem;
+  color: #303030;
+  margin: 2rem auto 0; }
+.ukraine hr {
+  margin: 0 auto 2rem auto;
+  background-color: #5eb678;
+  height: 4px;
+  width: 10%;
+  border-radius: 3px; }
+.ukraine .activity-description {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding-bottom: 1rem;
+  display: flex; }
+.ukraine .activity-description p {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  font-family: 'Roboto', sans-serif; }
+
 .footer {
   height: 16vh;
   background-color: black;
@@ -371,7 +406,7 @@ header .navbar .navbar-nav .sep {
   justify-content: space-between;
   align-items: center;
   padding-right: 8vw;
-  padding-right: 5vw; }
+  padding-right: 15vw; }
 .footer img {
   transition: .05s ease-in-out; }
 .footer img:hover {
