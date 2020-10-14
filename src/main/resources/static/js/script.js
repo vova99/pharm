@@ -15,7 +15,7 @@ document.getElementById("desctopSearch").addEventListener("focusout", function()
         for (var i = 0; i < a.length; i++) {
             a[i].style.display = "none";
         }
-    }, 100);
+    }, 300);
 });
 
 document.getElementById("mobileSearch").addEventListener("focus", function() {
@@ -35,7 +35,7 @@ document.getElementById("mobileSearch").addEventListener("focusout", function() 
         for (var i = 0; i < a.length; i++) {
             a[i].style.display = "none";
         }
-    }, 100);
+    }, 300);
 });
 
 function click(obj) {

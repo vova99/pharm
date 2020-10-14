@@ -98,7 +98,7 @@
 
                 <th:block th:each="form : ${formList}">
                     <h3 onclick="sh(this.id+'-par')" th:id="${form.name}" th:text="${form.name}">Injectable products</h3>
-                    <div th:id="${form.name}+'-par'" class="collapsable">
+                    <div th:id="${form.name}+'-par'" >
                         <ul>
                             <li th:each="product:${form.products}"><a th:href="@{'/products-'+${product.url}}" th:text="${product.name}">AMOXICRID RETARD 15% inj</a></li>
                         </ul>
@@ -111,7 +111,7 @@
 
                 <th:block th:each="form : ${drugList}">
                     <h3 onclick="sh(this.id+'-par')" th:id="${form.name}" th:text="${form.name}">Injectable products</h3>
-                    <div th:id="${form.name}+'-par'" class="collapsable">
+                    <div th:id="${form.name}+'-par'" >
                         <ul>
                             <li th:each="product:${form.products}"><a th:href="@{'/products-'+${product.url}}" th:text="${product.name}">AMOXICRID RETARD 15% inj</a></li>
                         </ul>
@@ -124,7 +124,7 @@
 
                 <th:block th:each="form : ${targetList}">
                     <h3 onclick="sh(this.id+'-par')" th:id="${form.name}" th:text="${form.name}">Injectable products</h3>
-                    <div th:id="${form.name}+'-par'" class="collapsable">
+                    <div th:id="${form.name}+'-par'" >
                         <ul>
                             <li th:each="product:${form.products}"><a th:href="@{'/products-'+${product.url}}" th:text="${product.name}">AMOXICRID RETARD 15% inj</a></li>
                         </ul>
