@@ -137,7 +137,7 @@ body .cback .phone-icon {
   background-color: white;
   border: 1px solid #5eb678;
   border-radius: 5px;
-  z-index: 1488;
+  z-index: 999;
   display: none;
   box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.3);
   max-height: 80vh;
@@ -240,7 +240,7 @@ header .navbar .navbar-nav .sep {
 
 .video {
   padding-bottom: 4.5rem;
-  background-image: url("../img/hiclipart.com (1).png");
+  background-image: url("../img/background.png");
   background-size: contain;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -290,7 +290,7 @@ header .navbar .navbar-nav .sep {
   text-decoration: none;
   transition: .2s ease-in-out; }
 .video .videoframe {
-  height: 55vh; }
+  height: 50vh; }
 
 .activities {
   background-color: #f1f1f1;
@@ -301,6 +301,10 @@ header .navbar .navbar-nav .sep {
   background-size: cover;
   height: 50vh; }
 .activities .row .description {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
   padding: 1rem 2rem 1rem;
   text-align: center;
   height: 50vh;
@@ -309,10 +313,8 @@ header .navbar .navbar-nav .sep {
   vertical-align: middle; }
 .activities .row .description h1 {
   font-size: 1.5rem; }
-.activities .row .description a {
-  color: #303030; }
-.activities .row .description a:hover {
-  text-decoration-color: #5eb678; }
+.activities .row .description p {
+  margin-bottom: 0; }
 .activities .row .description:hover {
   background-color: #fff;
   -webkit-transition: .2s ease-in-out;
@@ -349,9 +351,10 @@ header .navbar .navbar-nav .sep {
   justify-content: space-evenly; }
 .counter .stats li {
   background-color: white;
+  width: 20%;
   text-align: center;
   font-size: 4rem;
-  padding: 1rem 2rem;
+  padding: 1rem;
   box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.2);
   border-radius: 3px; }
 .counter .stats li hr {
@@ -361,7 +364,6 @@ header .navbar .navbar-nav .sep {
   background-color: #dee2e6;
   border: none; }
 .counter .stats li p {
-  max-width: 15vw;
   font-size: 1.5rem;
   margin-bottom: 0; }
 
@@ -394,6 +396,8 @@ header .navbar .navbar-nav .sep {
   flex-direction: column;
   font-size: 1.1rem;
   line-height: 1.3;
+  margin-bottom: 0;
+  padding-right: 1rem;
   font-family: 'Roboto', sans-serif; }
 
 .footer {
@@ -442,16 +446,135 @@ header .navbar .navbar-nav .sep {
   header nav .navbar-nav .desctopSearch {
     display: none; }
   header .navbar {
-    padding-top: 0;
-    padding-bottom: 0; }
+    padding: 0 0.2rem 0 0.1rem; }
   .carousel .carousel-inner .carousel-item {
     height: 35vh; }
+  .carousel .carousel-inner .carousel-item .carousel-caption {
+    top: 30%;
+    width: 80%;
+    height: fit-content;
+    left: 10%;
+    background-color: rgba(255, 255, 255, 0.5); }
+  .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+    font-size: 1.2rem;
+    padding: 1rem 0 0;
+    border-top: 4px solid #5eb678;
+    border-bottom: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 60px black; }
   .dropdown-content {
     top: 4rem;
     max-height: 75vh;
     overflow: auto;
     width: 96%;
-    margin-left: 2%; } }
+    margin-left: 2%; }
+  .video {
+    padding-bottom: 3rem; }
+  .video h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #303030;
+    margin: 1rem auto 0; }
+  .video hr {
+    margin: 0 auto 0.5rem auto;
+    background-color: #5eb678;
+    height: 3px;
+    width: 4rem;
+    border-radius: 3px; }
+  .video .video-description {
+    padding-bottom: 1rem; }
+  .video .video-description h1 {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: fit-content; }
+  .video .video-description p {
+    font-size: 1rem;
+    line-height: 1.3; }
+  .video .videoframe {
+    margin: 0;
+    padding: 0;
+    height: 35vh; }
+  .activities .row .picture {
+    height: 40vh; }
+  .activities .row .description {
+    padding: 1rem 0.5rem 1rem;
+    height: fit-content; }
+  .activities .row .description h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem; }
+  .activities .row .description p {
+    font-size: 1rem;
+    line-height: 1.3; }
+  .counter {
+    height: fit-content;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    text-align: center; }
+  .counter h1 {
+    font-size: 2.5rem;
+    margin: 0; }
+  .counter hr {
+    margin: 0 auto 2rem auto;
+    height: 3px;
+    width: 4rem; }
+  .counter .stats {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column; }
+  .counter .stats li {
+    display: block;
+    width: 15rem;
+    margin: 0 auto 1rem;
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem 1rem;
+    border-radius: 1.5rem; }
+  .counter .stats li hr {
+    margin: 0 auto;
+    width: 80%;
+    height: 2px; }
+  .counter .stats li p {
+    max-width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 0; }
+  .ukraine {
+    padding-bottom: 1rem; }
+  .ukraine h1 {
+    font-size: 2.5rem;
+    margin: 1rem auto 0; }
+  .ukraine hr {
+    margin: 0 auto 1rem auto;
+    height: 3px;
+    width: 4rem;
+    border-radius: 3px; }
+  .ukraine .image {
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+  .ukraine .activity-description {
+    text-align: center;
+    padding: 0 0.5rem 1rem; }
+  .ukraine .activity-description p {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.1; }
+  .footer {
+    height: 15vh;
+    padding-left: 1vw; }
+  .footer .socials {
+    display: none !important; }
+  .footer a {
+    display: block;
+    margin-left: 0.1rem;
+    color: #f1f1f1;
+    font-size: 1.1rem; }
+  .footer p {
+    display: none; } }
 
 @media (min-width: 321px) and (max-width: 544px) {
   header nav .logo {
@@ -471,12 +594,139 @@ header .navbar .navbar-nav .sep {
     padding-bottom: 0; }
   .carousel .carousel-inner .carousel-item {
     height: 35vh; }
+  .carousel .carousel-inner .carousel-item .carousel-caption {
+    top: 30%;
+    width: 80%;
+    height: fit-content;
+    left: 10%;
+    background-color: rgba(255, 255, 255, 0.5); }
+  .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+    font-size: 1.5rem;
+    padding: 1rem 0 0;
+    border-top: 4px solid #5eb678;
+    border-bottom: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 60px black; }
   .dropdown-content {
     top: 4rem;
     max-height: 75vh;
     overflow: auto;
     width: 96%;
-    margin-left: 2%; } }
+    margin-left: 2%; }
+  .video {
+    padding-bottom: 3rem; }
+  .video h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #303030;
+    margin: 1rem auto 0; }
+  .video hr {
+    margin: 0 auto 0.5rem auto;
+    background-color: #5eb678;
+    height: 3px;
+    width: 4.5rem;
+    border-radius: 3px; }
+  .video .video-description {
+    padding-bottom: 1rem; }
+  .video .video-description h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    width: fit-content; }
+  .video .video-description p {
+    font-size: 1.1rem;
+    line-height: 1.3; }
+  .video .videoframe {
+    margin: 0;
+    padding: 0;
+    height: 35vh; }
+  .activities .row .picture {
+    height: 40vh; }
+  .activities .row .description {
+    padding: 1rem 0.5rem 1rem;
+    height: fit-content; }
+  .activities .row .description h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem; }
+  .activities .row .description p {
+    font-size: 1.1rem; }
+  .counter {
+    height: fit-content;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    text-align: center; }
+  .counter h1 {
+    font-size: 3rem;
+    margin: 0; }
+  .counter hr {
+    margin: 0 auto 2rem auto;
+    height: 3px;
+    width: 5rem; }
+  .counter .stats {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column; }
+  .counter .stats li {
+    display: block;
+    width: 18rem;
+    margin: 0 auto 1rem;
+    text-align: center;
+    font-size: 4rem;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem; }
+  .counter .stats li hr {
+    margin: 0 auto;
+    width: 80%;
+    height: 2px; }
+  .counter .stats li p {
+    max-width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0; }
+  .ukraine {
+    padding-bottom: 1rem; }
+  .ukraine h1 {
+    font-size: 3rem;
+    margin: 2rem auto 0; }
+  .ukraine hr {
+    margin: 0 auto 2rem auto;
+    height: 3px;
+    width: 5rem;
+    border-radius: 3px; }
+  .ukraine .image {
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+  .ukraine .activity-description {
+    text-align: center;
+    padding-bottom: 0 0.5rem 1rem; }
+  .ukraine .activity-description p {
+    margin-top: 1rem;
+    margin-bottom: 0; }
+  .footer {
+    height: 15vh;
+    padding-left: 1vw;
+    padding-right: 20vw; }
+  .footer .socials {
+    display: flex !important;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    height: 100%;
+    margin: auto auto auto 0.1rem;
+    text-align: center; }
+  .footer .socials img {
+    vertical-align: middle; }
+  .footer a {
+    display: block;
+    margin-right: 1rem;
+    color: #f1f1f1;
+    font-size: 1.1rem; }
+  .footer .social-one {
+    margin-bottom: 1rem; }
+  .footer p {
+    display: none; } }
 
 @media (min-width: 545px) and (max-width: 768px) {
   header nav .logo {
@@ -495,13 +745,121 @@ header .navbar .navbar-nav .sep {
     padding-top: 0;
     padding-bottom: 0; }
   .carousel .carousel-inner .carousel-item {
-    height: 35vh; }
+    height: 50vh; }
+  .carousel .carousel-inner .carousel-item .carousel-caption {
+    top: 40%;
+    width: 80%;
+    height: fit-content;
+    left: 10%;
+    background-color: rgba(255, 255, 255, 0.5); }
+  .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+    font-size: 2rem;
+    padding: 1rem 1rem 0;
+    border-top: 4px solid #5eb678;
+    border-bottom: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 60px black; }
   .dropdown-content {
     top: 4rem;
     max-height: 75vh;
     overflow: auto;
     width: 90%;
-    margin-left: 5%; } }
+    margin-left: 5%; }
+  .video {
+    padding-bottom: 4rem; }
+  .video h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #303030;
+    margin: 1.5rem auto 0; }
+  .video hr {
+    margin: 0 auto 0.5rem auto;
+    background-color: #5eb678;
+    height: 3px;
+    width: 5rem;
+    border-radius: 3px; }
+  .video .video-description {
+    padding-bottom: 1rem; }
+  .video .video-description h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    width: fit-content; }
+  .video .video-description p {
+    font-size: 1.1rem;
+    line-height: 1.3; }
+  .video .videoframe {
+    margin: 0;
+    padding: 0;
+    height: 50vh; }
+  .activities .row .description h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem; }
+  .counter {
+    height: fit-content;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    text-align: center; }
+  .counter h1 {
+    font-size: 3rem;
+    margin: 0; }
+  .counter hr {
+    margin: 0 auto 2rem auto;
+    height: 3px;
+    width: 5rem; }
+  .counter .stats {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column; }
+  .counter .stats li {
+    display: block;
+    width: 20rem;
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 4rem;
+    padding: 2rem;
+    border-radius: 1.5rem; }
+  .counter .stats li hr {
+    margin: 0 auto;
+    width: 80%;
+    height: 2px; }
+  .counter .stats li p {
+    max-width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0; }
+  .ukraine {
+    padding-bottom: 2.2rem; }
+  .ukraine h1 {
+    font-size: 3rem;
+    margin: 2rem auto 0; }
+  .ukraine hr {
+    margin: 0 auto 2rem auto;
+    height: 4px;
+    width: 5rem;
+    border-radius: 3px; }
+  .ukraine .image {
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+  .ukraine .activity-description {
+    text-align: center;
+    padding-bottom: 1rem; }
+  .ukraine .activity-description p {
+    margin-top: 2rem;
+    margin-bottom: 0; }
+  .footer {
+    height: 15vh;
+    padding-left: 1vw;
+    padding-right: 20vw; }
+  .footer a {
+    display: block;
+    margin-right: 1rem;
+    color: #f1f1f1;
+    font-size: 1.3rem; }
+  .footer p {
+    display: none; } }
 
 @media (min-width: 769px) and (max-width: 992px) {
   header nav .logo {
@@ -514,9 +872,131 @@ header .navbar .navbar-nav .sep {
     display: inline-block;
     font-size: 1em;
     padding: 1.2em 0 1em 0; }
+  .carousel .carousel-inner .carousel-item {
+    height: 75vh;
+    vertical-align: middle; }
+  .carousel .carousel-inner .carousel-item img {
+    min-width: 100vw;
+    max-width: 100%;
+    height: inherit;
+    object-fit: cover; }
+  .carousel .carousel-inner .carousel-item .carousel-caption {
+    top: 45%;
+    width: 80%;
+    height: fit-content;
+    left: 10%;
+    background-color: rgba(255, 255, 255, 0.5); }
+  .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+    font-size: 3rem;
+    padding: 1rem 1rem;
+    border-top: 4px solid #5eb678;
+    border-bottom: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 60px black; }
   .dropdown-content {
     width: 60%;
-    margin-left: 35%; } }
+    margin-left: 35%; }
+  .video {
+    padding-bottom: 5rem;
+    vertical-align: middle; }
+  .video h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    color: #303030;
+    margin: 1rem auto 0; }
+  .video hr {
+    margin: 0 auto 2rem auto;
+    background-color: #5eb678;
+    height: 4px;
+    width: 5rem;
+    border-radius: 3px; }
+  .video .video-description {
+    padding-bottom: 1rem; }
+  .video .video-description h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    width: fit-content; }
+  .video .video-description p {
+    font-size: 1.1rem;
+    line-height: 1.1; }
+  .video .videoframe {
+    margin: 0;
+    padding: 0;
+    height: 60vh; }
+  .activities .row .description h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem; }
+  .counter {
+    background-color: white;
+    background-image: url(../img/products-banner.jpg);
+    background-attachment: fixed;
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+    overflow: hidden;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    text-align: center; }
+  .counter h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+    margin: 0;
+    letter-spacing: -1px; }
+  .counter hr {
+    margin: 0 auto 2rem auto;
+    background-color: #5eb678;
+    height: 4px;
+    width: 5rem;
+    border-radius: 3px; }
+  .counter .stats {
+    width: 100%;
+    margin-top: 2em;
+    display: inline-flex;
+    justify-content: space-evenly; }
+  .counter .stats li {
+    background-color: white;
+    width: 23%;
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 1rem;
+    box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 3px; }
+  .counter .stats li hr {
+    margin: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #dee2e6;
+    border: none; }
+  .counter .stats li p {
+    font-size: 1.3rem;
+    margin-bottom: 0; }
+  .ukraine {
+    padding-bottom: 2.2rem; }
+  .ukraine h1 {
+    font-size: 3.5rem;
+    margin: 2rem auto 0; }
+  .ukraine hr {
+    margin: 0 auto 2rem auto;
+    height: 4px;
+    width: 5rem;
+    border-radius: 3px; }
+  .ukraine .image {
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+  .ukraine .activity-description {
+    text-align: center;
+    padding-bottom: 1rem; }
+  .ukraine .activity-description p {
+    margin-top: 2rem;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    margin-bottom: 0; } }
 
 @media (min-width: 993px) and (max-width: 1200px) {
   header nav .logo .logo-sm {
@@ -528,7 +1008,36 @@ header .navbar .navbar-nav .sep {
   header .navbar .navbar-nav li {
     display: inline-block;
     font-size: 1em;
-    padding: 1.2em 0.4em 1em 0.4em; } }
+    padding: 1.2em 0.4em 1em 0.4em; }
+  .carousel .carousel-inner .carousel-item {
+    height: 75vh;
+    vertical-align: middle; }
+  .carousel .carousel-inner .carousel-item img {
+    min-width: 100vw;
+    max-width: 100%;
+    height: inherit;
+    object-fit: cover; }
+  .carousel .carousel-inner .carousel-item .carousel-caption {
+    top: 45%;
+    width: 80%;
+    height: fit-content;
+    left: 10%;
+    background-color: rgba(255, 255, 255, 0.5); }
+  .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+    font-size: 3rem;
+    padding: 1rem 1rem;
+    border-top: 4px solid #5eb678;
+    border-bottom: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 60px black; }
+  .activities .row .description {
+    padding: 0.5rem; }
+  .activities .row .description h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem; }
+  .activities .row .description p {
+    font-size: 1.05rem;
+    line-height: 1.2; } }
 
 @media (min-width: 1201px) and (max-width: 1440px) {
   header nav .logo .logo-sm {
@@ -540,7 +1049,35 @@ header .navbar .navbar-nav .sep {
   header .navbar .navbar-nav li {
     display: inline-block;
     font-size: 1em;
-    padding: 1.2em 0.4em 1em 0.4em; } }
+    padding: 1.2em 0.4em 1em 0.4em; }
+  .carousel .carousel-inner .carousel-item {
+    height: 75vh;
+    vertical-align: middle; }
+  .carousel .carousel-inner .carousel-item img {
+    min-width: 100vw;
+    max-width: 100%;
+    height: inherit;
+    object-fit: cover; }
+  .carousel .carousel-inner .carousel-item .carousel-caption {
+    top: 45%;
+    width: 70%;
+    height: fit-content;
+    left: 15%;
+    background-color: rgba(255, 255, 255, 0.5); }
+  .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+    font-size: 3rem;
+    padding: 1rem 1rem;
+    border-top: 4px solid #5eb678;
+    border-bottom: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 60px black; }
+  .activities .row .description {
+    padding: 0.5rem; }
+  .activities .row .description h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem; }
+  .activities .row .description p {
+    line-height: 1.25; } }
 
 @media (min-width: 1441px) {
   header nav .logo .logo-sm {

@@ -64,8 +64,8 @@
             </div>
             <div class="col-9">
                 <div class="row">
-                    <h5 th:text="${product.name}">Name of product rsesdfsdf</h5>
-                    <h6 th:text="${product.activeComponent}">componentss  sdfsdfsfee</h6>
+                    <h5 th:text="${product.name}"></h5>
+                    <h6 th:text="${product.activeComponent}"></h6>
                 </div>
             </div>
         </div>
@@ -84,29 +84,26 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="media/factory/p22.jpg" alt="First Slide">
-            <div class="carousel-caption d-none d-lg-block">
-                <h5>Сертифіковане виробництво міжнародним стандартом GMP</h5>
-<!--                <p>Ми отримали сертифікат належної виробничої практики <strong>GMP</strong> у 2005 році.</p>-->
+            <div class="carousel-caption d-block">
+                <h5>Сертифіковане міжнародним стандартом GMP виробництво</h5>
             </div>
         </div>
         <div class="carousel-item">
             <img src="media/factory/p45.jpg" alt="Second Slide">
-            <div class="carousel-caption d-none d-lg-block">
+            <div class="carousel-caption d-block">
                 <h5>Перше місце на ринку ветпрепаратів Румунії</h5>
             </div>
         </div>
         <div class="carousel-item">
             <img src="media/factory/p40.jpg" alt="Third Slide">
-            <div class="carousel-caption d-none d-lg-block">
+            <div class="carousel-caption d-block">
                 <h5>Лідери продажу препаратів у Східній Європі</h5>
-<!--                <p>Ми - лідери продажу препаратів у Східній Європі</p>-->
             </div>
         </div>
         <div class="carousel-item">
             <img src="img/products-banner.jpg" alt="Third Slide">
-            <div class="carousel-caption d-none d-lg-block">
+            <div class="carousel-caption d-block">
                 <h5>Висока біодоступність препаратів</h5>
-<!--                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
             </div>
         </div>
     </div>
@@ -124,18 +121,18 @@
     <h1>Про нас</h1>
     <hr>
     <div class="row">
-        <div class="col-lg-6 video-description">
-            <h1>Crida pharm</h1>
+        <div class="col-lg-5 col-xl-6  video-description">
+            <h1>Crida Pharm</h1>
             <p>
                 CRIDA PHARM  S.R.L. -  ветеринарно-фармацевтична компанія, яка була заснована в 1997 році. Початковою діяльністю компанії був імпорт та продаж ветеринарних препаратів.
                 У 2004 році , з урахуванням нових правил Європейського співтовариства,які  застосовуються в Румунії  і які  забороняють прямий продаж сировини, ми вирішили зробити завод, який виробляє ветеринарні препарати у відповідності до вимог європейських стандартів.
             </p>
             <a href="https://www.youtube.com/channel/UCs_CHOX7zi3WgUzmv9BeqKw" target="_blank">
-                <img th:src="@{'img/youtubech.png'}" width="40px">
+                <img src="img/youtubech.png" width="40px">
                 наш YouTube канал
             </a>
         </div>
-        <div class="col-lg-6 videoframe">
+        <div class="col-lg-7 col-xl-6 videoframe">
             <iframe id="ytplayer" type="text/html" width="100%" height="100%"
                     src="https://www.youtube.com/embed/mJK-OwzmYO0?autoplay=0&origin=http://example.com"
                     frameborder="0"></iframe>
@@ -218,80 +215,26 @@
     <h1>Діяльність в Україні</h1>
     <hr>
     <div class="row">
-        <div class="col-lg-5">
-            <img th:src="@{'media/factory/MG_0341.jpg'}" alt="" width="100%">
+        <div class="col-lg-6 image">
+            <img src="media/factory/team.png" alt="" width="100%">
         </div>
-        <div class="col-lg-7 activity-description">
+        <div class="col-lg-6 activity-description">
             <p>"Кріда Фарм Україна" розпочала свою діяльність в Україні з 2013 року. Офіс компанії на протязі всього періоду  знаходиться у місті Львові. За цей період і по сьогодні , представники компанії активно відвідують спеціалізовані виставки, тематичні конференції, як в Україні так і за її межами. Представники команди "Кріда Фарм Україна" володіють  високим рівенем знань ветеринарної фармакології та фармацефтики, а також значний досвід в галузі птахівництва та хутрового тваринництва. Досвід та знання, які спеціалісти команди "Кріда Фарм Україна " отримали на кращих  фермерських господарствах Європи та країн Латинської Америки, допомагає у пошуках ефективних рішень, які значно покращують рентабельність фермерського бізнесу наших партнерів. Успіх наших партнерів - це наша репутація!</p>
         </div>
     </div>
 </div>
 
 
-<!--<div class="container-fluid team team-section text-center">-->
-<!--    <h1>Наша команда</h1>-->
-<!--    <hr>-->
-<!--    <p class="grey-text w-responsive mx-auto mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
-<!--        Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam-->
-<!--        eum porro a pariatur veniam.</p>-->
-
-<!--    <div class="row">-->
-<!--        <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">-->
-<!--            <div class="avatar mx-auto">-->
-<!--                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class="rounded-circle z-depth-1"-->
-<!--                     alt="Sample avatar">-->
-<!--            </div>-->
-<!--            <h4 class="font-weight-bold mt-4">Anna Williams</h4>-->
-<!--            <p class="text-uppercase"><strong>Graphic designer</strong></p>-->
-<!--            <p class="grey-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,-->
-<!--                adipisci sed quia non numquam modi tempora eius.</p>-->
-<!--        </div>-->
-
-<!--        <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">-->
-<!--            <div class="avatar mx-auto">-->
-<!--                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" class="rounded-circle z-depth-1"-->
-<!--                     alt="Sample avatar">-->
-<!--            </div>-->
-<!--            <h4 class="font-weight-bold mt-4">John Doe</h4>-->
-<!--            <p class="text-uppercase"><strong>Web developer</strong></p>-->
-<!--            <p class="grey-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem ipsa accusantium-->
-<!--                doloremque rem laudantium totam aperiam.</p>-->
-<!--        </div>-->
-
-<!--        <div class="col-lg-3 col-md-6 mb-md-0 mb-5">-->
-<!--            <div class="avatar mx-auto">-->
-<!--                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" class="rounded-circle z-depth-1"-->
-<!--                     alt="Sample avatar">-->
-<!--            </div>-->
-<!--            <h4 class="font-weight-bold mt-4">Maria Smith</h4>-->
-<!--            <p class="text-uppercase"><strong>Photographer</strong></p>-->
-<!--            <p class="grey-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt-->
-<!--                mollit anim est fugiat nulla id eu laborum.</p>-->
-<!--        </div>-->
-
-<!--        <div class="col-lg-3 col-md-6">-->
-<!--            <div class="avatar mx-auto">-->
-<!--                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(32).jpg" class="rounded-circle z-depth-1"-->
-<!--                     alt="Sample avatar">-->
-<!--            </div>-->
-<!--            <h4 class="font-weight-bold mt-4">Tom Adams</h4>-->
-<!--            <p class="text-uppercase"><strong>Backend developer</strong></p>-->
-<!--            <p class="grey-text">Perspiciatis repellendus ad odit consequuntur, eveniet earum nisi qui consectetur-->
-<!--                totam officia voluptates perferendis voluptatibus aut.</p>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
 
 <div class="container-fluid footer">
-    <div style="display: inline-flex;">
-        <a href="#"><img src="img/facebook.png"  height="30px" alt="" title="Ми у Фейсбуці"></a>
-        <a href="#"><img src="img/youtube.png" height="30px" alt="" title="Ми на YouTube"></a>
+    <div class="socials" style="display: inline-flex;">
+        <a class="social-one" href="https://www.facebook.com/Crida-Pharm-Ukraine-109275254223267/" target="_blank"><img src="img/facebook.png"  height="30px" alt="" title="Ми у Фейсбуці"></a>
+        <a href="https://www.youtube.com/channel/UCs_CHOX7zi3WgUzmv9BeqKw" target="_blank"><img src="img/youtube.png" height="30px" alt="" title="Ми на YouTube"></a>
     </div>
     <p> <strong style="color: green; font-family:'Comfortaa', cursive;">&#169; Кріда</strong> Фарм, 2020</p>
     <div>
-        <a href="tel:097-909-2270">097-909-2270</a>
-        <a href="tel:098-209-1206">098-209-1206</a>
+        <a href="tel:+380979092270">+380 (97)-909-22-70</a>
+        <a href="tel:+380982091206">+380 (98)-209-12-06</a>
     </div>
 </div>
 
