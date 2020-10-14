@@ -37,7 +37,7 @@ public class MainController {
     @GetMapping("/")
     public String getIndex(Model model){
         model.addAttribute("productList",productService.findByStatus(StatusOfEntity.ACTIVE));
-        return "index";
+        return "index-copy";
     }
 
     @GetMapping("/test")
