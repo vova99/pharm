@@ -225,17 +225,17 @@ header .navbar .navbar-nav .sep {
   height: inherit;
   object-fit: cover; }
 .carousel .carousel-inner .carousel-item .carousel-caption {
-  top: 50%;
+  top: 40%;
   width: 70%;
   height: fit-content;
   left: 15%;
   background-color: rgba(255, 255, 255, 0.5); }
 .carousel .carousel-inner .carousel-item .carousel-caption h5 {
-  font-size: 4rem;
+  font-size: 3rem;
   padding: 1rem 3rem;
   border-top: 4px solid #5eb678;
   border-bottom: 2px solid white;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(20, 103, 67, 0.5);
   text-shadow: 0 0 60px black; }
 
 .video {
@@ -262,6 +262,7 @@ header .navbar .navbar-nav .sep {
 .video .video-description {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.85);
+  padding-top: 2rem;
   padding-bottom: 1rem; }
 .video .video-description h1 {
   font-size: 2rem;
@@ -454,14 +455,12 @@ header .navbar .navbar-nav .sep {
     width: 80%;
     height: fit-content;
     left: 10%;
-    background-color: rgba(255, 255, 255, 0.5); }
+  }
   .carousel .carousel-inner .carousel-item .carousel-caption h5 {
     font-size: 1.2rem;
     padding: 1rem 0 0;
     border-top: 4px solid #5eb678;
-    border-bottom: 2px solid white;
-    background-color: rgba(255, 255, 255, 0.5);
-    text-shadow: 0 0 60px black; }
+    border-bottom: 2px solid white;}
   .dropdown-content {
     top: 4rem;
     max-height: 75vh;
@@ -595,18 +594,17 @@ header .navbar .navbar-nav .sep {
   .carousel .carousel-inner .carousel-item {
     height: 35vh; }
   .carousel .carousel-inner .carousel-item .carousel-caption {
-    top: 30%;
+    top: 25%;
     width: 80%;
     height: fit-content;
     left: 10%;
     background-color: rgba(255, 255, 255, 0.5); }
   .carousel .carousel-inner .carousel-item .carousel-caption h5 {
     font-size: 1.5rem;
-    padding: 1rem 0 0;
+    padding: 1rem 0;
     border-top: 4px solid #5eb678;
     border-bottom: 2px solid white;
-    background-color: rgba(255, 255, 255, 0.5);
-    text-shadow: 0 0 60px black; }
+  }
   .dropdown-content {
     top: 4rem;
     max-height: 75vh;
@@ -627,7 +625,9 @@ header .navbar .navbar-nav .sep {
     width: 4.5rem;
     border-radius: 3px; }
   .video .video-description {
-    padding-bottom: 1rem; }
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+  }
   .video .video-description h1 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
@@ -642,7 +642,7 @@ header .navbar .navbar-nav .sep {
   .activities .row .picture {
     height: 40vh; }
   .activities .row .description {
-    padding: 1rem 0.5rem 1rem;
+    padding: 2rem 0.5rem 3rem;
     height: fit-content; }
   .activities .row .description h1 {
     font-size: 1.5rem;
@@ -757,8 +757,7 @@ header .navbar .navbar-nav .sep {
     padding: 1rem 1rem 0;
     border-top: 4px solid #5eb678;
     border-bottom: 2px solid white;
-    background-color: rgba(255, 255, 255, 0.5);
-    text-shadow: 0 0 60px black; }
+  }
   .dropdown-content {
     top: 4rem;
     max-height: 75vh;
@@ -881,7 +880,7 @@ header .navbar .navbar-nav .sep {
     height: inherit;
     object-fit: cover; }
   .carousel .carousel-inner .carousel-item .carousel-caption {
-    top: 45%;
+    top: 40%;
     width: 80%;
     height: fit-content;
     left: 10%;
@@ -891,8 +890,7 @@ header .navbar .navbar-nav .sep {
     padding: 1rem 1rem;
     border-top: 4px solid #5eb678;
     border-bottom: 2px solid white;
-    background-color: rgba(255, 255, 255, 0.5);
-    text-shadow: 0 0 60px black; }
+  }
   .dropdown-content {
     width: 60%;
     margin-left: 35%; }
@@ -1018,7 +1016,7 @@ header .navbar .navbar-nav .sep {
     height: inherit;
     object-fit: cover; }
   .carousel .carousel-inner .carousel-item .carousel-caption {
-    top: 45%;
+    top: 40%;
     width: 80%;
     height: fit-content;
     left: 10%;
@@ -1028,8 +1026,7 @@ header .navbar .navbar-nav .sep {
     padding: 1rem 1rem;
     border-top: 4px solid #5eb678;
     border-bottom: 2px solid white;
-    background-color: rgba(255, 255, 255, 0.5);
-    text-shadow: 0 0 60px black; }
+  }
   .activities .row .description {
     padding: 0.5rem; }
   .activities .row .description h1 {
@@ -1059,7 +1056,7 @@ header .navbar .navbar-nav .sep {
     height: inherit;
     object-fit: cover; }
   .carousel .carousel-inner .carousel-item .carousel-caption {
-    top: 45%;
+    top: 40%;
     width: 70%;
     height: fit-content;
     left: 15%;
@@ -1069,8 +1066,7 @@ header .navbar .navbar-nav .sep {
     padding: 1rem 1rem;
     border-top: 4px solid #5eb678;
     border-bottom: 2px solid white;
-    background-color: rgba(255, 255, 255, 0.5);
-    text-shadow: 0 0 60px black; }
+  }
   .activities .row .description {
     padding: 0.5rem; }
   .activities .row .description h1 {
