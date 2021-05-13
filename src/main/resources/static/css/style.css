@@ -229,13 +229,13 @@ header .navbar .navbar-nav .sep {
   width: 70%;
   height: fit-content;
   left: 15%;
-  background-color: rgba(255, 255, 255, 0.5); }
+  background-color: rgba(255, 255, 255, 0.3); }
 .carousel .carousel-inner .carousel-item .carousel-caption h5 {
   font-size: 3rem;
   padding: 1rem 3rem;
   border-top: 4px solid #5eb678;
   border-bottom: 2px solid white;
-  background-color: rgba(20, 103, 67, 0.5);
+  background-color: rgba(20, 103, 67, 0.3);
   text-shadow: 0 0 60px black; }
 
 .video {
@@ -598,7 +598,7 @@ header .navbar .navbar-nav .sep {
     width: 80%;
     height: fit-content;
     left: 10%;
-    background-color: rgba(255, 255, 255, 0.5); }
+    background-color: rgba(255, 255, 255, 0.3); }
   .carousel .carousel-inner .carousel-item .carousel-caption h5 {
     font-size: 1.5rem;
     padding: 1rem 0;
@@ -751,7 +751,7 @@ header .navbar .navbar-nav .sep {
     width: 80%;
     height: fit-content;
     left: 10%;
-    background-color: rgba(255, 255, 255, 0.5); }
+    background-color: rgba(255, 255, 255, 0.3); }
   .carousel .carousel-inner .carousel-item .carousel-caption h5 {
     font-size: 2rem;
     padding: 1rem 1rem 0;
@@ -884,7 +884,7 @@ header .navbar .navbar-nav .sep {
     width: 80%;
     height: fit-content;
     left: 10%;
-    background-color: rgba(255, 255, 255, 0.5); }
+    background-color: rgba(255, 255, 255, 0.3); }
   .carousel .carousel-inner .carousel-item .carousel-caption h5 {
     font-size: 3rem;
     padding: 1rem 1rem;
@@ -1020,7 +1020,7 @@ header .navbar .navbar-nav .sep {
     width: 80%;
     height: fit-content;
     left: 10%;
-    background-color: rgba(255, 255, 255, 0.5); }
+    background-color: rgba(255, 255, 255, 0.3); }
   .carousel .carousel-inner .carousel-item .carousel-caption h5 {
     font-size: 3rem;
     padding: 1rem 1rem;
@@ -1060,7 +1060,7 @@ header .navbar .navbar-nav .sep {
     width: 70%;
     height: fit-content;
     left: 15%;
-    background-color: rgba(255, 255, 255, 0.5); }
+    background-color: rgba(255, 255, 255, 0.3);}
   .carousel .carousel-inner .carousel-item .carousel-caption h5 {
     font-size: 3rem;
     padding: 1rem 1rem;
